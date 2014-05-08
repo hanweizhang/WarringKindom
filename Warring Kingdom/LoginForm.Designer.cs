@@ -146,7 +146,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Warring_Kingdom.Properties.Resources.login;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(484, 362);
+            this.ClientSize = new System.Drawing.Size(484, 361);
             this.Controls.Add(this.authorLabel);
             this.Controls.Add(this.regLink);
             this.Controls.Add(this.LoginBtn);
@@ -160,10 +160,10 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(500, 400);
-            this.MinimumSize = new System.Drawing.Size(500, 400);
+            this.MaximumSize = new System.Drawing.Size(500, 399);
+            this.MinimumSize = new System.Drawing.Size(500, 399);
             this.Name = "LoginForm";
-            this.Padding = new System.Windows.Forms.Padding(10);
+            this.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " Login";
             this.ResumeLayout(false);
