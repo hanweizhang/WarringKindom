@@ -1,0 +1,41 @@
+C:\Users\zhangh\documents\visual studio 2013\Projects\Warring Kingdom\Warring Kingdom\bin\Debug\Warring Kingdom.exe.config
+C:\Users\zhangh\documents\visual studio 2013\Projects\Warring Kingdom\Warring Kingdom\bin\Debug\Warring Kingdom.exe
+C:\Users\zhangh\documents\visual studio 2013\Projects\Warring Kingdom\Warring Kingdom\bin\Debug\Warring Kingdom.pdb
+C:\Users\zhangh\documents\visual studio 2013\Projects\Warring Kingdom\Warring Kingdom\obj\Debug\Warring_Kingdom.GameForm.resources
+C:\Users\zhangh\documents\visual studio 2013\Projects\Warring Kingdom\Warring Kingdom\obj\Debug\Warring_Kingdom.GamePanel.resources
+C:\Users\zhangh\documents\visual studio 2013\Projects\Warring Kingdom\Warring Kingdom\obj\Debug\Warring_Kingdom.InfoPanel.resources
+C:\Users\zhangh\documents\visual studio 2013\Projects\Warring Kingdom\Warring Kingdom\obj\Debug\Warring_Kingdom.LoginForm.resources
+C:\Users\zhangh\documents\visual studio 2013\Projects\Warring Kingdom\Warring Kingdom\obj\Debug\Warring_Kingdom.Properties.Resources.resources
+C:\Users\zhangh\documents\visual studio 2013\Projects\Warring Kingdom\Warring Kingdom\obj\Debug\Warring_Kingdom.RegForm.resources
+C:\Users\zhangh\documents\visual studio 2013\Projects\Warring Kingdom\Warring Kingdom\obj\Debug\Warring Kingdom.csproj.GenerateResource.Cache
+C:\Users\zhangh\documents\visual studio 2013\Projects\Warring Kingdom\Warring Kingdom\obj\Debug\Warring Kingdom.exe
+C:\Users\zhangh\documents\visual studio 2013\Projects\Warring Kingdom\Warring Kingdom\obj\Debug\Warring Kingdom.pdb
+C:\Users\zhangh\documents\visual studio 2013\Projects\Warring Kingdom\Warring Kingdom\obj\Debug\Warring Kingdom.csprojResolveAssemblyReference.cache
+C:\Users\supremeJarkiroy\Desktop\wk\Warring Kingdom\Warring Kingdom\bin\Debug\Warring Kingdom.exe.config
+C:\Users\supremeJarkiroy\Desktop\wk\Warring Kingdom\Warring Kingdom\obj\Debug\Warring Kingdom.exe
+C:\Users\supremeJarkiroy\Desktop\wk\Warring Kingdom\Warring Kingdom\obj\Debug\Warring Kingdom.pdb
+C:\Users\supremeJarkiroy\Desktop\wk\Warring Kingdom\Warring Kingdom\bin\Debug\Warring Kingdom.exe
+C:\Users\supremeJarkiroy\Desktop\wk\Warring Kingdom\Warring Kingdom\bin\Debug\Warring Kingdom.pdb
+C:\Users\supremeJarkiroy\Desktop\wk\Warring Kingdom\Warring Kingdom\obj\Debug\Warring Kingdom.csprojResolveAssemblyReference.cache
+C:\Users\supremeJarkiroy\Desktop\wk\Warring Kingdom\Warring Kingdom\obj\Debug\Warring_Kingdom.GameForm.resources
+C:\Users\supremeJarkiroy\Desktop\wk\Warring Kingdom\Warring Kingdom\obj\Debug\Warring_Kingdom.GamePanel.resources
+C:\Users\supremeJarkiroy\Desktop\wk\Warring Kingdom\Warring Kingdom\obj\Debug\Warring_Kingdom.InfoPanel.resources
+C:\Users\supremeJarkiroy\Desktop\wk\Warring Kingdom\Warring Kingdom\obj\Debug\Warring_Kingdom.LoginForm.resources
+C:\Users\supremeJarkiroy\Desktop\wk\Warring Kingdom\Warring Kingdom\obj\Debug\Warring_Kingdom.Properties.Resources.resources
+C:\Users\supremeJarkiroy\Desktop\wk\Warring Kingdom\Warring Kingdom\obj\Debug\Warring_Kingdom.RegForm.resources
+C:\Users\supremeJarkiroy\Desktop\wk\Warring Kingdom\Warring Kingdom\obj\Debug\Warring Kingdom.csproj.GenerateResource.Cache
+E:\wk\Warring Kingdom\Warring Kingdom\bin\Debug\Warring Kingdom.exe.config
+E:\wk\Warring Kingdom\Warring Kingdom\obj\Debug\Warring Kingdom.exe
+E:\wk\Warring Kingdom\Warring Kingdom\obj\Debug\Warring Kingdom.pdb
+E:\wk\Warring Kingdom\Warring Kingdom\bin\Debug\Warring Kingdom.exe
+E:\wk\Warring Kingdom\Warring Kingdom\bin\Debug\Warring Kingdom.pdb
+E:\wk\Warring Kingdom\Warring Kingdom\obj\Debug\Warring Kingdom.csprojResolveAssemblyReference.cache
+E:\wk\Warring Kingdom\Warring Kingdom\obj\Debug\Warring_Kingdom.GameForm.resources
+E:\wk\Warring Kingdom\Warring Kingdom\obj\Debug\Warring_Kingdom.GamePanel.resources
+E:\wk\Warring Kingdom\Warring Kingdom\obj\Debug\Warring_Kingdom.InfoPanel.resources
+E:\wk\Warring Kingdom\Warring Kingdom\obj\Debug\Warring_Kingdom.LoginForm.resources
+E:\wk\Warring Kingdom\Warring Kingdom\obj\Debug\Warring_Kingdom.Properties.Resources.resources
+E:\wk\Warring Kingdom\Warring Kingdom\obj\Debug\Warring_Kingdom.RegForm.resources
+E:\wk\Warring Kingdom\Warring Kingdom\obj\Debug\Warring Kingdom.csproj.GenerateResource.Cache
+E:\wk\Warring Kingdom\Warring Kingdom\obj\Debug\Warring_Kingdom.CityPanel.resources
+C:\Users\zhangh\Documents\Visual Studio 2013\Projects\Warring Kingdom\Warring Kingdom\obj\Debug\Warring_Kingdom.CityPanel.resources
