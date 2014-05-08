@@ -39,3 +39,6 @@ E:\wk\Warring Kingdom\Warring Kingdom\obj\Debug\Warring_Kingdom.RegForm.resource
 E:\wk\Warring Kingdom\Warring Kingdom\obj\Debug\Warring Kingdom.csproj.GenerateResource.Cache
 E:\wk\Warring Kingdom\Warring Kingdom\obj\Debug\Warring_Kingdom.CityPanel.resources
 C:\Users\zhangh\Documents\Visual Studio 2013\Projects\Warring Kingdom\Warring Kingdom\obj\Debug\Warring_Kingdom.CityPanel.resources
+C:\Users\millerna\Documents\GitHub\WarringKindom\Warring Kingdom\bin\Debug\Warring Kingdom.exe.config
+C:\Users\millerna\Documents\GitHub\WarringKindom\Warring Kingdom\obj\Debug\Warring Kingdom.exe
+C:\Users\millerna\Documents\GitHub\WarringKindom\Warring Kingdom\obj\Debug\Warring Kingdom.pdb
