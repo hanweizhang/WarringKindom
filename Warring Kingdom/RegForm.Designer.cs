@@ -45,11 +45,10 @@
             // usrBox
             // 
             this.usrBox.BackColor = System.Drawing.SystemColors.Control;
-            this.usrBox.Location = new System.Drawing.Point(307, 175);
-            this.usrBox.Margin = new System.Windows.Forms.Padding(4);
+            this.usrBox.Location = new System.Drawing.Point(230, 142);
             this.usrBox.MaxLength = 16;
             this.usrBox.Name = "usrBox";
-            this.usrBox.Size = new System.Drawing.Size(159, 22);
+            this.usrBox.Size = new System.Drawing.Size(120, 20);
             this.usrBox.TabIndex = 0;
             // 
             // usrLabel
@@ -58,32 +57,29 @@
             this.usrLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.usrLabel.ForeColor = System.Drawing.Color.Lime;
             this.usrLabel.Image = ((System.Drawing.Image)(resources.GetObject("usrLabel.Image")));
-            this.usrLabel.Location = new System.Drawing.Point(164, 175);
-            this.usrLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.usrLabel.Location = new System.Drawing.Point(123, 142);
             this.usrLabel.Name = "usrLabel";
-            this.usrLabel.Size = new System.Drawing.Size(135, 40);
+            this.usrLabel.Size = new System.Drawing.Size(101, 32);
             this.usrLabel.TabIndex = 6;
-            this.usrLabel.Text = "                  ";
+            this.usrLabel.Text = "                   ";
             // 
             // pwdBox1
             // 
             this.pwdBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.pwdBox1.Location = new System.Drawing.Point(307, 239);
-            this.pwdBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pwdBox1.Location = new System.Drawing.Point(230, 194);
             this.pwdBox1.MaxLength = 16;
             this.pwdBox1.Name = "pwdBox1";
-            this.pwdBox1.Size = new System.Drawing.Size(159, 22);
+            this.pwdBox1.Size = new System.Drawing.Size(120, 20);
             this.pwdBox1.TabIndex = 2;
             this.pwdBox1.UseSystemPasswordChar = true;
             // 
             // emailBox
             // 
             this.emailBox.BackColor = System.Drawing.SystemColors.Control;
-            this.emailBox.Location = new System.Drawing.Point(307, 207);
-            this.emailBox.Margin = new System.Windows.Forms.Padding(4);
+            this.emailBox.Location = new System.Drawing.Point(230, 168);
             this.emailBox.MaxLength = 16;
             this.emailBox.Name = "emailBox";
-            this.emailBox.Size = new System.Drawing.Size(159, 22);
+            this.emailBox.Size = new System.Drawing.Size(120, 20);
             this.emailBox.TabIndex = 1;
             // 
             // emailLabel
@@ -92,10 +88,9 @@
             this.emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.emailLabel.ForeColor = System.Drawing.Color.Lime;
             this.emailLabel.Image = ((System.Drawing.Image)(resources.GetObject("emailLabel.Image")));
-            this.emailLabel.Location = new System.Drawing.Point(217, 207);
-            this.emailLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.emailLabel.Location = new System.Drawing.Point(163, 168);
             this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(82, 42);
+            this.emailLabel.Size = new System.Drawing.Size(62, 34);
             this.emailLabel.TabIndex = 7;
             this.emailLabel.Text = "             ";
             // 
@@ -105,10 +100,9 @@
             this.pwdLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.pwdLabel1.ForeColor = System.Drawing.Color.Lime;
             this.pwdLabel1.Image = ((System.Drawing.Image)(resources.GetObject("pwdLabel1.Image")));
-            this.pwdLabel1.Location = new System.Drawing.Point(167, 239);
-            this.pwdLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.pwdLabel1.Location = new System.Drawing.Point(125, 194);
             this.pwdLabel1.Name = "pwdLabel1";
-            this.pwdLabel1.Size = new System.Drawing.Size(132, 45);
+            this.pwdLabel1.Size = new System.Drawing.Size(99, 37);
             this.pwdLabel1.TabIndex = 8;
             this.pwdLabel1.Text = "                         ";
             // 
@@ -118,21 +112,19 @@
             this.pwdLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.pwdLabel2.ForeColor = System.Drawing.Color.Lime;
             this.pwdLabel2.Image = ((System.Drawing.Image)(resources.GetObject("pwdLabel2.Image")));
-            this.pwdLabel2.Location = new System.Drawing.Point(55, 271);
-            this.pwdLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.pwdLabel2.Location = new System.Drawing.Point(41, 220);
             this.pwdLabel2.Name = "pwdLabel2";
-            this.pwdLabel2.Size = new System.Drawing.Size(244, 43);
+            this.pwdLabel2.Size = new System.Drawing.Size(183, 35);
             this.pwdLabel2.TabIndex = 9;
             this.pwdLabel2.Text = "                           ";
             // 
             // pwdBox2
             // 
             this.pwdBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.pwdBox2.Location = new System.Drawing.Point(307, 271);
-            this.pwdBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pwdBox2.Location = new System.Drawing.Point(230, 220);
             this.pwdBox2.MaxLength = 16;
             this.pwdBox2.Name = "pwdBox2";
-            this.pwdBox2.Size = new System.Drawing.Size(159, 22);
+            this.pwdBox2.Size = new System.Drawing.Size(120, 20);
             this.pwdBox2.TabIndex = 3;
             this.pwdBox2.UseSystemPasswordChar = true;
             // 
@@ -148,10 +140,9 @@
             this.ConfirmBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ConfirmBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.ConfirmBtn.ForeColor = System.Drawing.Color.Gold;
-            this.ConfirmBtn.Location = new System.Drawing.Point(269, 330);
-            this.ConfirmBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.ConfirmBtn.Location = new System.Drawing.Point(202, 268);
             this.ConfirmBtn.Name = "ConfirmBtn";
-            this.ConfirmBtn.Size = new System.Drawing.Size(126, 48);
+            this.ConfirmBtn.Size = new System.Drawing.Size(94, 39);
             this.ConfirmBtn.TabIndex = 4;
             this.ConfirmBtn.Text = "Confirm";
             this.ConfirmBtn.UseVisualStyleBackColor = false;
@@ -163,10 +154,9 @@
             this.loginTitle.Font = new System.Drawing.Font("Snap ITC", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginTitle.ForeColor = System.Drawing.Color.Tomato;
             this.loginTitle.Image = ((System.Drawing.Image)(resources.GetObject("loginTitle.Image")));
-            this.loginTitle.Location = new System.Drawing.Point(-28, 12);
-            this.loginTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.loginTitle.Location = new System.Drawing.Point(-21, 10);
             this.loginTitle.Name = "loginTitle";
-            this.loginTitle.Size = new System.Drawing.Size(713, 83);
+            this.loginTitle.Size = new System.Drawing.Size(535, 67);
             this.loginTitle.TabIndex = 10;
             this.loginTitle.Text = "                                   ";
             // 
@@ -176,19 +166,18 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Snap ITC", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Tomato;
-            this.label1.Location = new System.Drawing.Point(159, 100);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(119, 81);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 44);
+            this.label1.Size = new System.Drawing.Size(0, 35);
             this.label1.TabIndex = 11;
             // 
             // RegForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(643, 437);
+            this.ClientSize = new System.Drawing.Size(484, 362);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.loginTitle);
             this.Controls.Add(this.ConfirmBtn);
@@ -203,12 +192,11 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(661, 482);
-            this.MinimumSize = new System.Drawing.Size(661, 482);
+            this.MaximumSize = new System.Drawing.Size(500, 400);
+            this.MinimumSize = new System.Drawing.Size(500, 400);
             this.Name = "RegForm";
-            this.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";
             this.Load += new System.EventHandler(this.RegForm_Load);

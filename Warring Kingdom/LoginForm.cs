@@ -18,7 +18,7 @@ namespace Warring_Kingdom
             InitializeComponent();
         }
 
-        private void regLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void RegBtn_Click(object sender, EventArgs e)
         {
             Form regForm = new RegForm();
             regForm.ShowDialog();
