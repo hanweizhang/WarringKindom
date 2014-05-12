@@ -45,93 +45,101 @@
             // usrBox
             // 
             this.usrBox.BackColor = System.Drawing.SystemColors.Control;
-            this.usrBox.Location = new System.Drawing.Point(230, 142);
+            this.usrBox.Location = new System.Drawing.Point(307, 175);
+            this.usrBox.Margin = new System.Windows.Forms.Padding(4);
             this.usrBox.MaxLength = 16;
             this.usrBox.Name = "usrBox";
-            this.usrBox.Size = new System.Drawing.Size(120, 20);
+            this.usrBox.Size = new System.Drawing.Size(159, 22);
             this.usrBox.TabIndex = 0;
             // 
             // usrLabel
             // 
-            this.usrLabel.AutoSize = true;
             this.usrLabel.BackColor = System.Drawing.Color.Transparent;
             this.usrLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.usrLabel.ForeColor = System.Drawing.Color.Lime;
-            this.usrLabel.Location = new System.Drawing.Point(133, 143);
+            this.usrLabel.Image = ((System.Drawing.Image)(resources.GetObject("usrLabel.Image")));
+            this.usrLabel.Location = new System.Drawing.Point(164, 175);
+            this.usrLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.usrLabel.Name = "usrLabel";
-            this.usrLabel.Size = new System.Drawing.Size(91, 17);
+            this.usrLabel.Size = new System.Drawing.Size(135, 40);
             this.usrLabel.TabIndex = 6;
-            this.usrLabel.Text = "Username: ";
+            this.usrLabel.Text = "                  ";
             // 
             // pwdBox1
             // 
             this.pwdBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.pwdBox1.Location = new System.Drawing.Point(230, 194);
+            this.pwdBox1.Location = new System.Drawing.Point(307, 239);
+            this.pwdBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pwdBox1.MaxLength = 16;
             this.pwdBox1.Name = "pwdBox1";
-            this.pwdBox1.Size = new System.Drawing.Size(120, 20);
+            this.pwdBox1.Size = new System.Drawing.Size(159, 22);
             this.pwdBox1.TabIndex = 2;
             this.pwdBox1.UseSystemPasswordChar = true;
             // 
             // emailBox
             // 
             this.emailBox.BackColor = System.Drawing.SystemColors.Control;
-            this.emailBox.Location = new System.Drawing.Point(230, 168);
+            this.emailBox.Location = new System.Drawing.Point(307, 207);
+            this.emailBox.Margin = new System.Windows.Forms.Padding(4);
             this.emailBox.MaxLength = 16;
             this.emailBox.Name = "emailBox";
-            this.emailBox.Size = new System.Drawing.Size(120, 20);
+            this.emailBox.Size = new System.Drawing.Size(159, 22);
             this.emailBox.TabIndex = 1;
             // 
             // emailLabel
             // 
-            this.emailLabel.AutoSize = true;
             this.emailLabel.BackColor = System.Drawing.Color.Transparent;
             this.emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.emailLabel.ForeColor = System.Drawing.Color.Lime;
-            this.emailLabel.Location = new System.Drawing.Point(167, 169);
+            this.emailLabel.Image = ((System.Drawing.Image)(resources.GetObject("emailLabel.Image")));
+            this.emailLabel.Location = new System.Drawing.Point(217, 207);
+            this.emailLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(57, 17);
+            this.emailLabel.Size = new System.Drawing.Size(82, 42);
             this.emailLabel.TabIndex = 7;
-            this.emailLabel.Text = "Email: ";
+            this.emailLabel.Text = "             ";
             // 
             // pwdLabel1
             // 
-            this.pwdLabel1.AutoSize = true;
             this.pwdLabel1.BackColor = System.Drawing.Color.Transparent;
             this.pwdLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.pwdLabel1.ForeColor = System.Drawing.Color.Lime;
-            this.pwdLabel1.Location = new System.Drawing.Point(137, 195);
+            this.pwdLabel1.Image = ((System.Drawing.Image)(resources.GetObject("pwdLabel1.Image")));
+            this.pwdLabel1.Location = new System.Drawing.Point(167, 239);
+            this.pwdLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.pwdLabel1.Name = "pwdLabel1";
-            this.pwdLabel1.Size = new System.Drawing.Size(87, 17);
+            this.pwdLabel1.Size = new System.Drawing.Size(132, 45);
             this.pwdLabel1.TabIndex = 8;
-            this.pwdLabel1.Text = "Password: ";
+            this.pwdLabel1.Text = "                         ";
             // 
             // pwdLabel2
             // 
-            this.pwdLabel2.AutoSize = true;
             this.pwdLabel2.BackColor = System.Drawing.Color.Transparent;
             this.pwdLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.pwdLabel2.ForeColor = System.Drawing.Color.Lime;
-            this.pwdLabel2.Location = new System.Drawing.Point(77, 221);
+            this.pwdLabel2.Image = ((System.Drawing.Image)(resources.GetObject("pwdLabel2.Image")));
+            this.pwdLabel2.Location = new System.Drawing.Point(55, 271);
+            this.pwdLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.pwdLabel2.Name = "pwdLabel2";
-            this.pwdLabel2.Size = new System.Drawing.Size(147, 17);
+            this.pwdLabel2.Size = new System.Drawing.Size(244, 43);
             this.pwdLabel2.TabIndex = 9;
-            this.pwdLabel2.Text = "Confirm Password: ";
+            this.pwdLabel2.Text = "                           ";
             // 
             // pwdBox2
             // 
             this.pwdBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.pwdBox2.Location = new System.Drawing.Point(230, 220);
+            this.pwdBox2.Location = new System.Drawing.Point(307, 271);
+            this.pwdBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pwdBox2.MaxLength = 16;
             this.pwdBox2.Name = "pwdBox2";
-            this.pwdBox2.Size = new System.Drawing.Size(120, 20);
+            this.pwdBox2.Size = new System.Drawing.Size(159, 22);
             this.pwdBox2.TabIndex = 3;
             this.pwdBox2.UseSystemPasswordChar = true;
             // 
             // ConfirmBtn
             // 
             this.ConfirmBtn.BackColor = System.Drawing.Color.Transparent;
-            this.ConfirmBtn.BackgroundImage = global::Warring_Kingdom.Properties.Resources.button;
+            this.ConfirmBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ConfirmBtn.BackgroundImage")));
             this.ConfirmBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ConfirmBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ConfirmBtn.FlatAppearance.BorderSize = 0;
@@ -139,9 +147,11 @@
             this.ConfirmBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.ConfirmBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ConfirmBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ConfirmBtn.Location = new System.Drawing.Point(202, 268);
+            this.ConfirmBtn.ForeColor = System.Drawing.Color.Gold;
+            this.ConfirmBtn.Location = new System.Drawing.Point(269, 330);
+            this.ConfirmBtn.Margin = new System.Windows.Forms.Padding(4);
             this.ConfirmBtn.Name = "ConfirmBtn";
-            this.ConfirmBtn.Size = new System.Drawing.Size(80, 30);
+            this.ConfirmBtn.Size = new System.Drawing.Size(126, 48);
             this.ConfirmBtn.TabIndex = 4;
             this.ConfirmBtn.Text = "Confirm";
             this.ConfirmBtn.UseVisualStyleBackColor = false;
@@ -149,15 +159,16 @@
             // 
             // loginTitle
             // 
-            this.loginTitle.AutoSize = true;
             this.loginTitle.BackColor = System.Drawing.Color.Transparent;
             this.loginTitle.Font = new System.Drawing.Font("Snap ITC", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginTitle.ForeColor = System.Drawing.Color.Tomato;
-            this.loginTitle.Location = new System.Drawing.Point(73, 29);
+            this.loginTitle.Image = ((System.Drawing.Image)(resources.GetObject("loginTitle.Image")));
+            this.loginTitle.Location = new System.Drawing.Point(-28, 12);
+            this.loginTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.loginTitle.Name = "loginTitle";
-            this.loginTitle.Size = new System.Drawing.Size(218, 39);
+            this.loginTitle.Size = new System.Drawing.Size(713, 83);
             this.loginTitle.TabIndex = 10;
-            this.loginTitle.Text = "Welcome to";
+            this.loginTitle.Text = "                                   ";
             // 
             // label1
             // 
@@ -165,19 +176,19 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Snap ITC", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Tomato;
-            this.label1.Location = new System.Drawing.Point(119, 81);
+            this.label1.Location = new System.Drawing.Point(159, 100);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(291, 35);
+            this.label1.Size = new System.Drawing.Size(0, 44);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Warring Kingdom";
             // 
             // RegForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(484, 362);
+            this.ClientSize = new System.Drawing.Size(643, 437);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.loginTitle);
             this.Controls.Add(this.ConfirmBtn);
@@ -192,13 +203,15 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(500, 400);
-            this.MinimumSize = new System.Drawing.Size(500, 400);
+            this.MaximumSize = new System.Drawing.Size(661, 482);
+            this.MinimumSize = new System.Drawing.Size(661, 482);
             this.Name = "RegForm";
-            this.Padding = new System.Windows.Forms.Padding(10);
+            this.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";
+            this.Load += new System.EventHandler(this.RegForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

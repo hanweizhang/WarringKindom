@@ -35,41 +35,41 @@
             this.pwdBox = new System.Windows.Forms.TextBox();
             this.loginTitle = new System.Windows.Forms.Label();
             this.LoginBtn = new System.Windows.Forms.Button();
-            this.regLink = new System.Windows.Forms.LinkLabel();
+            this.regLink = new System.Windows.Forms.Button();
             this.authorLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // usrLabel
             // 
-            this.usrLabel.AutoSize = true;
             this.usrLabel.BackColor = System.Drawing.Color.Transparent;
             this.usrLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.usrLabel.ForeColor = System.Drawing.Color.Lime;
-            this.usrLabel.Location = new System.Drawing.Point(155, 169);
+            this.usrLabel.Image = ((System.Drawing.Image)(resources.GetObject("usrLabel.Image")));
+            this.usrLabel.Location = new System.Drawing.Point(133, 167);
             this.usrLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.usrLabel.Name = "usrLabel";
-            this.usrLabel.Size = new System.Drawing.Size(106, 20);
+            this.usrLabel.Size = new System.Drawing.Size(152, 45);
             this.usrLabel.TabIndex = 0;
-            this.usrLabel.Text = "Username: ";
+            this.usrLabel.Text = "                             ";
             // 
             // pwdLabel
             // 
-            this.pwdLabel.AutoSize = true;
             this.pwdLabel.BackColor = System.Drawing.Color.Transparent;
             this.pwdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.pwdLabel.ForeColor = System.Drawing.Color.Lime;
-            this.pwdLabel.Location = new System.Drawing.Point(160, 214);
+            this.pwdLabel.ForeColor = System.Drawing.Color.LightYellow;
+            this.pwdLabel.Image = ((System.Drawing.Image)(resources.GetObject("pwdLabel.Image")));
+            this.pwdLabel.Location = new System.Drawing.Point(147, 212);
             this.pwdLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.pwdLabel.Name = "pwdLabel";
-            this.pwdLabel.Size = new System.Drawing.Size(103, 20);
+            this.pwdLabel.Size = new System.Drawing.Size(129, 51);
             this.pwdLabel.TabIndex = 1;
-            this.pwdLabel.Text = "Password: ";
+            this.pwdLabel.Text = "                           ";
             // 
             // usrBox
             // 
             this.usrBox.BackColor = System.Drawing.SystemColors.Control;
             this.usrBox.Location = new System.Drawing.Point(284, 167);
-            this.usrBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.usrBox.Margin = new System.Windows.Forms.Padding(4);
             this.usrBox.MaxLength = 16;
             this.usrBox.Name = "usrBox";
             this.usrBox.Size = new System.Drawing.Size(159, 22);
@@ -79,7 +79,7 @@
             // 
             this.pwdBox.BackColor = System.Drawing.SystemColors.Control;
             this.pwdBox.Location = new System.Drawing.Point(284, 213);
-            this.pwdBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pwdBox.Margin = new System.Windows.Forms.Padding(4);
             this.pwdBox.MaxLength = 16;
             this.pwdBox.Name = "pwdBox";
             this.pwdBox.Size = new System.Drawing.Size(159, 22);
@@ -88,16 +88,16 @@
             // 
             // loginTitle
             // 
-            this.loginTitle.AutoSize = true;
             this.loginTitle.BackColor = System.Drawing.Color.Transparent;
             this.loginTitle.Font = new System.Drawing.Font("Snap ITC", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginTitle.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.loginTitle.Location = new System.Drawing.Point(60, 55);
+            this.loginTitle.Image = ((System.Drawing.Image)(resources.GetObject("loginTitle.Image")));
+            this.loginTitle.Location = new System.Drawing.Point(-14, 44);
             this.loginTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.loginTitle.Name = "loginTitle";
-            this.loginTitle.Size = new System.Drawing.Size(497, 61);
+            this.loginTitle.Size = new System.Drawing.Size(677, 61);
             this.loginTitle.TabIndex = 4;
-            this.loginTitle.Text = "Warring Kingdom";
+            this.loginTitle.Text = "                          ";
             // 
             // LoginBtn
             // 
@@ -111,10 +111,10 @@
             this.LoginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LoginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.LoginBtn.ForeColor = System.Drawing.Color.Gold;
-            this.LoginBtn.Location = new System.Drawing.Point(333, 271);
-            this.LoginBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LoginBtn.Location = new System.Drawing.Point(319, 269);
+            this.LoginBtn.Margin = new System.Windows.Forms.Padding(4);
             this.LoginBtn.Name = "LoginBtn";
-            this.LoginBtn.Size = new System.Drawing.Size(107, 37);
+            this.LoginBtn.Size = new System.Drawing.Size(108, 47);
             this.LoginBtn.TabIndex = 5;
             this.LoginBtn.Text = "Login";
             this.LoginBtn.UseVisualStyleBackColor = false;
@@ -122,18 +122,25 @@
             // 
             // regLink
             // 
-            this.regLink.AutoSize = true;
             this.regLink.BackColor = System.Drawing.Color.Transparent;
+            this.regLink.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("regLink.BackgroundImage")));
+            this.regLink.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.regLink.Enabled = false;
+            this.regLink.FlatAppearance.BorderSize = 0;
+            this.regLink.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.regLink.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.regLink.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.regLink.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.regLink.LinkColor = System.Drawing.Color.Cyan;
-            this.regLink.Location = new System.Drawing.Point(213, 279);
-            this.regLink.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.regLink.ForeColor = System.Drawing.Color.Gold;
+            this.regLink.Location = new System.Drawing.Point(182, 269);
+            this.regLink.Margin = new System.Windows.Forms.Padding(4);
             this.regLink.Name = "regLink";
-            this.regLink.Size = new System.Drawing.Size(80, 20);
+            this.regLink.Size = new System.Drawing.Size(116, 47);
             this.regLink.TabIndex = 4;
-            this.regLink.TabStop = true;
             this.regLink.Text = "Register";
-            this.regLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.regLink_LinkClicked);
+            this.regLink.UseVisualStyleBackColor = false;
+            this.regLink.UseWaitCursor = true;
+            this.regLink.Click += new System.EventHandler(this.LoginBtn_Click);
             // 
             // authorLabel
             // 
@@ -152,6 +159,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BackgroundImage = global::Warring_Kingdom.Properties.Resources.login;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(643, 436);
@@ -167,7 +175,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(661, 481);
             this.MinimumSize = new System.Drawing.Size(661, 481);
@@ -188,7 +196,7 @@
         private System.Windows.Forms.TextBox pwdBox;
         private System.Windows.Forms.Label loginTitle;
         private System.Windows.Forms.Button LoginBtn;
-        private System.Windows.Forms.LinkLabel regLink;
+        private System.Windows.Forms.Button regLink;
         private System.Windows.Forms.Label authorLabel;
     }
 }

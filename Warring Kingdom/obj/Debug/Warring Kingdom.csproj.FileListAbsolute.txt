@@ -48,3 +48,14 @@ C:\Users\millerna\Documents\GitHub\WarringKindom\Warring Kingdom\bin\Debug\Warri
 C:\Users\millerna\Documents\GitHub\WarringKindom\Warring Kingdom\obj\Debug\Warring Kingdom.exe
 C:\Users\millerna\Documents\GitHub\WarringKindom\Warring Kingdom\obj\Debug\Warring Kingdom.pdb
 >>>>>>> badb84fd383e9816c3212170de0ecfab8f8df664
+C:\Users\millerna\Documents\GitHub\WarringKindom\Warring Kingdom\bin\Debug\Warring Kingdom.exe
+C:\Users\millerna\Documents\GitHub\WarringKindom\Warring Kingdom\bin\Debug\Warring Kingdom.pdb
+C:\Users\millerna\Documents\GitHub\WarringKindom\Warring Kingdom\obj\Debug\Warring Kingdom.csprojResolveAssemblyReference.cache
+C:\Users\millerna\Documents\GitHub\WarringKindom\Warring Kingdom\obj\Debug\Warring_Kingdom.CityPanel.resources
+C:\Users\millerna\Documents\GitHub\WarringKindom\Warring Kingdom\obj\Debug\Warring_Kingdom.GameForm.resources
+C:\Users\millerna\Documents\GitHub\WarringKindom\Warring Kingdom\obj\Debug\Warring_Kingdom.GamePanel.resources
+C:\Users\millerna\Documents\GitHub\WarringKindom\Warring Kingdom\obj\Debug\Warring_Kingdom.InfoPanel.resources
+C:\Users\millerna\Documents\GitHub\WarringKindom\Warring Kingdom\obj\Debug\Warring_Kingdom.LoginForm.resources
+C:\Users\millerna\Documents\GitHub\WarringKindom\Warring Kingdom\obj\Debug\Warring_Kingdom.Properties.Resources.resources
+C:\Users\millerna\Documents\GitHub\WarringKindom\Warring Kingdom\obj\Debug\Warring_Kingdom.RegForm.resources
+C:\Users\millerna\Documents\GitHub\WarringKindom\Warring Kingdom\obj\Debug\Warring Kingdom.csproj.GenerateResource.Cache

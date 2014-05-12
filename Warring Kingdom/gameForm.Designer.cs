@@ -34,8 +34,8 @@
             this.cityBtn2 = new System.Windows.Forms.Button();
             this.title = new System.Windows.Forms.Label();
             this.titlePanel = new System.Windows.Forms.Panel();
-            this.infoPanel1 = new Warring_Kingdom.InfoPanel();
             this.gamePanel1 = new Warring_Kingdom.GamePanel();
+            this.infoPanel1 = new Warring_Kingdom.InfoPanel();
             this.titlePanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,10 +51,10 @@
             this.menuBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.menuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.menuBtn.ForeColor = System.Drawing.Color.Transparent;
-            this.menuBtn.Location = new System.Drawing.Point(1847, 9);
+            this.menuBtn.Location = new System.Drawing.Point(2463, 11);
             this.menuBtn.Margin = new System.Windows.Forms.Padding(0);
             this.menuBtn.Name = "menuBtn";
-            this.menuBtn.Size = new System.Drawing.Size(64, 64);
+            this.menuBtn.Size = new System.Drawing.Size(85, 79);
             this.menuBtn.TabIndex = 0;
             this.menuBtn.UseVisualStyleBackColor = true;
             this.menuBtn.Click += new System.EventHandler(this.menuBtn_Click);
@@ -70,10 +70,10 @@
             this.cityBtn1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.cityBtn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cityBtn1.ForeColor = System.Drawing.Color.Transparent;
-            this.cityBtn1.Location = new System.Drawing.Point(116, 522);
+            this.cityBtn1.Location = new System.Drawing.Point(155, 642);
             this.cityBtn1.Margin = new System.Windows.Forms.Padding(0);
             this.cityBtn1.Name = "cityBtn1";
-            this.cityBtn1.Size = new System.Drawing.Size(64, 64);
+            this.cityBtn1.Size = new System.Drawing.Size(85, 79);
             this.cityBtn1.TabIndex = 0;
             this.cityBtn1.UseVisualStyleBackColor = true;
             this.cityBtn1.Click += new System.EventHandler(this.cityBtn_Click);
@@ -89,10 +89,10 @@
             this.cityBtn2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.cityBtn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cityBtn2.ForeColor = System.Drawing.Color.Transparent;
-            this.cityBtn2.Location = new System.Drawing.Point(116, 606);
+            this.cityBtn2.Location = new System.Drawing.Point(155, 746);
             this.cityBtn2.Margin = new System.Windows.Forms.Padding(0);
             this.cityBtn2.Name = "cityBtn2";
-            this.cityBtn2.Size = new System.Drawing.Size(64, 64);
+            this.cityBtn2.Size = new System.Drawing.Size(85, 79);
             this.cityBtn2.TabIndex = 0;
             this.cityBtn2.UseVisualStyleBackColor = true;
             this.cityBtn2.Click += new System.EventHandler(this.cityBtn_Click);
@@ -104,9 +104,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.title.AutoSize = true;
             this.title.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.title.Location = new System.Drawing.Point(717, 10);
+            this.title.Location = new System.Drawing.Point(956, 12);
+            this.title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(66, 31);
+            this.title.Size = new System.Drawing.Size(82, 39);
             this.title.TabIndex = 0;
             this.title.Text = "Title";
             this.title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -114,10 +115,21 @@
             // titlePanel
             // 
             this.titlePanel.Controls.Add(this.title);
-            this.titlePanel.Location = new System.Drawing.Point(308, 12);
+            this.titlePanel.Location = new System.Drawing.Point(411, 15);
+            this.titlePanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.titlePanel.Name = "titlePanel";
-            this.titlePanel.Size = new System.Drawing.Size(1500, 50);
+            this.titlePanel.Size = new System.Drawing.Size(2000, 62);
             this.titlePanel.TabIndex = 2;
+            // 
+            // gamePanel1
+            // 
+            this.gamePanel1.BackColor = System.Drawing.Color.Transparent;
+            this.gamePanel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.gamePanel1.Location = new System.Drawing.Point(352, 94);
+            this.gamePanel1.Margin = new System.Windows.Forms.Padding(5);
+            this.gamePanel1.Name = "gamePanel1";
+            this.gamePanel1.Size = new System.Drawing.Size(2132, 1107);
+            this.gamePanel1.TabIndex = 3;
             // 
             // infoPanel1
             // 
@@ -127,25 +139,16 @@
             this.infoPanel1.Location = new System.Drawing.Point(0, 0);
             this.infoPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.infoPanel1.Name = "infoPanel1";
-            this.infoPanel1.Size = new System.Drawing.Size(250, 500);
+            this.infoPanel1.Size = new System.Drawing.Size(333, 615);
             this.infoPanel1.TabIndex = 1;
-            // 
-            // gamePanel1
-            // 
-            this.gamePanel1.BackColor = System.Drawing.Color.Transparent;
-            this.gamePanel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.gamePanel1.Location = new System.Drawing.Point(264, 76);
-            this.gamePanel1.Name = "gamePanel1";
-            this.gamePanel1.Size = new System.Drawing.Size(1600, 900);
-            this.gamePanel1.TabIndex = 3;
             // 
             // GameForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Warring_Kingdom.Properties.Resources.main;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(1942, 1102);
             this.Controls.Add(this.gamePanel1);
             this.Controls.Add(this.cityBtn1);
             this.Controls.Add(this.cityBtn2);
@@ -154,6 +157,7 @@
             this.Controls.Add(this.menuBtn);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "GameForm";
             this.ShowInTaskbar = false;
             this.Text = "gameForm";

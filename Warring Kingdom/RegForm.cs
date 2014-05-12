@@ -106,5 +106,10 @@ namespace Warring_Kingdom
                 return false;
             }
         }
+
+        private void RegForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
