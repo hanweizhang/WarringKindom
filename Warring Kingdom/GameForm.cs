@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,8 @@ namespace Warring_Kingdom
 {
     public partial class GameForm : Form
     {
+        private string username;
+
         public GameForm()
         {
             InitializeComponent();
@@ -19,7 +22,19 @@ namespace Warring_Kingdom
             this.title.Location = new System.Drawing.Point(this.titlePanel.Width/2-this.title.Width/2, this.titlePanel.Height/2-this.title.Height/2);
         }
 
+        public GameForm(string username)
+        {
+            this.username = username;
+            InitializeComponent();
+            this.cityPanel = new CityPanel(this);
+            this.title.Location = new System.Drawing.Point(this.titlePanel.Width / 2 - this.title.Width / 2, this.titlePanel.Height / 2 - this.title.Height / 2);
+            initInfoPanel(username);
+        }
 
+        private void initInfoPanel(string username)
+        {
+            this.infoPanel1.getData(username);
+        }
 
         private void menuBtn_Click(object sender, EventArgs e)
         {

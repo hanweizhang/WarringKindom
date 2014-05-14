@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,6 +44,44 @@ namespace Warring_Kingdom
             this.goldLabel.Location = new System.Drawing.Point(startX, this.army.Location.Y + this.army.Height + LINE_SPACE);
             // gold
             this.gold.Location = new System.Drawing.Point(startX, this.goldLabel.Location.Y + this.goldLabel.Height);
+        }
+
+        public void getData(string username)
+        {
+            try
+            {
+                // connect to the server
+                String connectStr = "server=titan.csse.rose-hulman.edu; uid=wkuser; pwd=wkuser; database=WarKing";
+                SqlConnection conn = new SqlConnection(connectStr);
+                conn.Open();
+                // get the information
+                try
+                {
+                    String comm = "SELECT D.KingdomName, D.LandName, D.Army, D.Gold "+
+                                    "FROM DisplayKingdom D, UserInfo U "+
+                                    "WHERE D.UserID = U.UserID AND U.Username = '" + username + "'";
+                    SqlCommand selectComm = new SqlCommand(comm, conn);
+                    SqlDataReader reader = selectComm.ExecuteReader();
+                    reader.Read();
+                        // Name
+                        this.name.Text = username;
+                        this.kingdom.Text = (String)reader.GetValue(0);
+                        this.land.Text = (String)reader.GetValue(1);
+                        this.army.Text = reader.GetValue(2)+"";
+                        this.gold.Text = reader.GetValue(3)+"";
+                    reader.Close();
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.ToString());
+                }
+
+                conn.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
         }
     }
 }

@@ -30,7 +30,7 @@ namespace Warring_Kingdom
             {
                 if (checkLogin())
                 {
-                    Form gameForm = new GameForm();
+                    Form gameForm = new GameForm(this.usrBox.Text);
                     gameForm.ShowDialog();
                     this.Close();
                 }
