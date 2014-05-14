@@ -128,6 +128,7 @@
             this.Controls.Add(this.backBtn);
             this.Controls.Add(this.emptyLand);
             this.Controls.Add(this.cityPic);
+            this.Location = new System.Drawing.Point(275, 76);
             this.Name = "CityPanel";
             this.Size = new System.Drawing.Size(1600, 900);
             ((System.ComponentModel.ISupportInitialize)(this.cityPic)).EndInit();

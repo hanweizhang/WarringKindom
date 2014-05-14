@@ -50,23 +50,19 @@ namespace Warring_Kingdom
         public void cityEnter()
         {
             this.gamePanel1.Hide();
-            this.infoPanel1.Hide();
-            this.cityBtn1.Hide();
-            this.cityBtn2.Hide();
-            this.menuBtn.Hide();
-            this.infoPanel1.Hide();
-            this.titlePanel.Hide();
+            //this.cityBtn1.Hide();
+            //this.cityBtn2.Hide();
+            //this.menuBtn.Hide();
+            //this.titlePanel.Hide();
         }
 
         public void cityExit()
         {
             this.gamePanel1.Show();
-            this.infoPanel1.Show();
-            this.cityBtn1.Show();
-            this.cityBtn2.Show();
-            this.menuBtn.Show();
-            this.infoPanel1.Show();
-            this.titlePanel.Show();
+            //this.cityBtn1.Show();
+            //this.cityBtn2.Show();
+            //this.menuBtn.Show();
+            //this.titlePanel.Show();
         }
 
         public void saveCity(CityPanel cityPanel)
