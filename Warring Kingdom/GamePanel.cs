@@ -140,5 +140,10 @@ namespace Warring_Kingdom
             } 
             #endregion
         }
+
+        private void mapPic_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

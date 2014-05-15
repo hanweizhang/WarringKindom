@@ -28,20 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GamePanel));
             this.mapPic = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.mapPic)).BeginInit();
             this.SuspendLayout();
             // 
             // mapPic
             // 
-            this.mapPic.Image = global::Warring_Kingdom.Properties.Resources.gamemap;
+            this.mapPic.Image = ((System.Drawing.Image)(resources.GetObject("mapPic.Image")));
             this.mapPic.InitialImage = null;
             this.mapPic.Location = new System.Drawing.Point(0, 0);
+            this.mapPic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mapPic.Name = "mapPic";
-            this.mapPic.Size = new System.Drawing.Size(1600, 900);
+            this.mapPic.Size = new System.Drawing.Size(2133, 1108);
             this.mapPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.mapPic.TabIndex = 0;
             this.mapPic.TabStop = false;
+            this.mapPic.Click += new System.EventHandler(this.mapPic_Click);
             this.mapPic.MouseDown += new System.Windows.Forms.MouseEventHandler(this.GamePanel_MouseDown);
             this.mapPic.MouseEnter += new System.EventHandler(this.GamePanel_MouseEnter);
             this.mapPic.MouseMove += new System.Windows.Forms.MouseEventHandler(this.GamePanel_MouseMove);
@@ -49,13 +52,14 @@
             // 
             // GamePanel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Controls.Add(this.mapPic);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "GamePanel";
-            this.Size = new System.Drawing.Size(1600, 900);
+            this.Size = new System.Drawing.Size(2133, 1108);
             ((System.ComponentModel.ISupportInitialize)(this.mapPic)).EndInit();
             this.ResumeLayout(false);
 
