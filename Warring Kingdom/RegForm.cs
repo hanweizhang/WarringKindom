@@ -36,6 +36,10 @@ namespace Warring_Kingdom
             {
                 error = "Username is required";
             }
+            else if (this.kdBox.Text.Equals(""))
+            {
+                error = "Kingdom Name is required";
+            }
             else if (this.emailBox.Text.Equals(""))
             {
                 error = "Email is required";
@@ -71,7 +75,7 @@ namespace Warring_Kingdom
                 try
                 {
                     // check if username already exist
-                    SqlCommand checkComm = new SqlCommand("SELECT * FROM [UserInfo] WHERE Username='" + this.usrBox.Text + "'", conn);
+                    SqlCommand checkComm = new SqlCommand("SELECT * FROM [UserInfo] WHERE Username='" + this.kdBox.Text + "'", conn);
                     SqlDataReader reader = checkComm.ExecuteReader();
                     if (reader.Read())
                     {
@@ -81,7 +85,7 @@ namespace Warring_Kingdom
                     }
                     reader.Close();
                     // create the user
-                    SqlCommand insertComm = new SqlCommand("INSERT INTO [UserInfo](Username,[Email],Userpassword) VALUES('" + this.usrBox.Text + "','" + this.emailBox.Text + "','" + this.pwdBox1.Text + "')", conn);
+                    SqlCommand insertComm = new SqlCommand("INSERT INTO [UserInfo](Username,[Email],Userpassword) VALUES('" + this.kdBox.Text + "','" + this.emailBox.Text + "','" + this.pwdBox1.Text + "')", conn);
                     int result = insertComm.ExecuteNonQuery();
                     if(result!=1){
                         MessageBox.Show("Fail to create the user, try again");

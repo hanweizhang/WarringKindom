@@ -33,8 +33,8 @@
             this.name = new System.Windows.Forms.Label();
             this.kingdomLabel = new System.Windows.Forms.Label();
             this.kingdom = new System.Windows.Forms.Label();
-            this.landLabel = new System.Windows.Forms.Label();
-            this.land = new System.Windows.Forms.Label();
+            this.cityLabel = new System.Windows.Forms.Label();
+            this.city = new System.Windows.Forms.Label();
             this.armyLabel = new System.Windows.Forms.Label();
             this.army = new System.Windows.Forms.Label();
             this.goldLabel = new System.Windows.Forms.Label();
@@ -81,25 +81,25 @@
             this.kingdom.TabIndex = 3;
             this.kingdom.Text = "shabiliujiaqi";
             // 
-            // landLabel
+            // cityLabel
             // 
-            this.landLabel.AutoSize = true;
-            this.landLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.landLabel.Location = new System.Drawing.Point(55, 213);
-            this.landLabel.Name = "landLabel";
-            this.landLabel.Size = new System.Drawing.Size(57, 17);
-            this.landLabel.TabIndex = 4;
-            this.landLabel.Text = "Lands:";
+            this.cityLabel.AutoSize = true;
+            this.cityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cityLabel.Location = new System.Drawing.Point(55, 213);
+            this.cityLabel.Name = "cityLabel";
+            this.cityLabel.Size = new System.Drawing.Size(58, 17);
+            this.cityLabel.TabIndex = 4;
+            this.cityLabel.Text = "Cities: ";
             // 
-            // land
+            // city
             // 
-            this.land.AutoSize = true;
-            this.land.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.land.Location = new System.Drawing.Point(55, 230);
-            this.land.Name = "land";
-            this.land.Size = new System.Drawing.Size(81, 17);
-            this.land.TabIndex = 5;
-            this.land.Text = "shabiliujiaqi";
+            this.city.AutoSize = true;
+            this.city.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.city.Location = new System.Drawing.Point(55, 230);
+            this.city.Name = "city";
+            this.city.Size = new System.Drawing.Size(81, 17);
+            this.city.TabIndex = 5;
+            this.city.Text = "shabiliujiaqi";
             // 
             // armyLabel
             // 
@@ -152,8 +152,8 @@
             this.Controls.Add(this.goldLabel);
             this.Controls.Add(this.army);
             this.Controls.Add(this.armyLabel);
-            this.Controls.Add(this.land);
-            this.Controls.Add(this.landLabel);
+            this.Controls.Add(this.city);
+            this.Controls.Add(this.cityLabel);
             this.Controls.Add(this.kingdom);
             this.Controls.Add(this.kingdomLabel);
             this.Controls.Add(this.name);
@@ -173,8 +173,8 @@
         private System.Windows.Forms.Label name;
         private System.Windows.Forms.Label kingdomLabel;
         private System.Windows.Forms.Label kingdom;
-        private System.Windows.Forms.Label landLabel;
-        private System.Windows.Forms.Label land;
+        private System.Windows.Forms.Label cityLabel;
+        private System.Windows.Forms.Label city;
         private System.Windows.Forms.Label armyLabel;
         private System.Windows.Forms.Label army;
         private System.Windows.Forms.Label goldLabel;

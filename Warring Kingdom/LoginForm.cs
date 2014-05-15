@@ -64,18 +64,18 @@ namespace Warring_Kingdom
             try
             {
                 // connect to the server
-                String connectStr = "server=titan.csse.rose-hulman.edu; uid=wkuser; pwd=wkuser; database=WarKing";
+                String connectStr = "server=titan.csse.rose-hulman.edu; uid=zhangh ; pwd=Zhw628zhw628; database=WarKing";
                 SqlConnection conn = new SqlConnection(connectStr);
                 conn.Open();
                 // insert the user information into the database
                 try
                 {
                     // check if username already exist
-                    SqlCommand checkComm = new SqlCommand("SELECT Userpassword FROM [UserInfo] WHERE Username='" + this.usrBox.Text + "'", conn);
+                    SqlCommand checkComm = new SqlCommand("EXEC CheckExistingUser @username='"+this.usrBox.Text+"', @userpassword='"+this.pwdBox.Text+"'", conn);
                     SqlDataReader reader = checkComm.ExecuteReader();
                     if (reader.Read())
                     {
-                        if (!this.pwdBox.Text.Equals((String)reader.GetValue(0)))
+                        if ((int)reader.GetValue(0)!=0)
                         {
                             MessageBox.Show("Incorrect password");
                             conn.Close();

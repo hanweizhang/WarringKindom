@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegForm));
-            this.usrBox = new System.Windows.Forms.TextBox();
-            this.usrLabel = new System.Windows.Forms.Label();
+            this.kdBox = new System.Windows.Forms.TextBox();
+            this.kdLabel = new System.Windows.Forms.Label();
             this.pwdBox1 = new System.Windows.Forms.TextBox();
             this.emailBox = new System.Windows.Forms.TextBox();
             this.emailLabel = new System.Windows.Forms.Label();
@@ -40,28 +40,30 @@
             this.ConfirmBtn = new System.Windows.Forms.Button();
             this.loginTitle = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.usrBox = new System.Windows.Forms.TextBox();
+            this.usrLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // usrBox
+            // kdBox
             // 
-            this.usrBox.BackColor = System.Drawing.SystemColors.Control;
-            this.usrBox.Location = new System.Drawing.Point(230, 142);
-            this.usrBox.MaxLength = 16;
-            this.usrBox.Name = "usrBox";
-            this.usrBox.Size = new System.Drawing.Size(120, 20);
-            this.usrBox.TabIndex = 0;
+            this.kdBox.BackColor = System.Drawing.SystemColors.Control;
+            this.kdBox.Location = new System.Drawing.Point(230, 142);
+            this.kdBox.MaxLength = 16;
+            this.kdBox.Name = "kdBox";
+            this.kdBox.Size = new System.Drawing.Size(120, 20);
+            this.kdBox.TabIndex = 1;
             // 
-            // usrLabel
+            // kdLabel
             // 
-            this.usrLabel.BackColor = System.Drawing.Color.Transparent;
-            this.usrLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.usrLabel.ForeColor = System.Drawing.Color.Lime;
-            this.usrLabel.Image = ((System.Drawing.Image)(resources.GetObject("usrLabel.Image")));
-            this.usrLabel.Location = new System.Drawing.Point(123, 142);
-            this.usrLabel.Name = "usrLabel";
-            this.usrLabel.Size = new System.Drawing.Size(101, 32);
-            this.usrLabel.TabIndex = 6;
-            this.usrLabel.Text = "                   ";
+            this.kdLabel.BackColor = System.Drawing.Color.Transparent;
+            this.kdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.kdLabel.ForeColor = System.Drawing.Color.Lime;
+            this.kdLabel.Image = ((System.Drawing.Image)(resources.GetObject("kdLabel.Image")));
+            this.kdLabel.Location = new System.Drawing.Point(123, 143);
+            this.kdLabel.Name = "kdLabel";
+            this.kdLabel.Size = new System.Drawing.Size(101, 32);
+            this.kdLabel.TabIndex = 6;
+            this.kdLabel.Text = "                   ";
             // 
             // pwdBox1
             // 
@@ -70,17 +72,17 @@
             this.pwdBox1.MaxLength = 16;
             this.pwdBox1.Name = "pwdBox1";
             this.pwdBox1.Size = new System.Drawing.Size(120, 20);
-            this.pwdBox1.TabIndex = 2;
+            this.pwdBox1.TabIndex = 3;
             this.pwdBox1.UseSystemPasswordChar = true;
             // 
             // emailBox
             // 
             this.emailBox.BackColor = System.Drawing.SystemColors.Control;
             this.emailBox.Location = new System.Drawing.Point(230, 168);
-            this.emailBox.MaxLength = 16;
+            this.emailBox.MaxLength = 50;
             this.emailBox.Name = "emailBox";
             this.emailBox.Size = new System.Drawing.Size(120, 20);
-            this.emailBox.TabIndex = 1;
+            this.emailBox.TabIndex = 2;
             // 
             // emailLabel
             // 
@@ -125,7 +127,7 @@
             this.pwdBox2.MaxLength = 16;
             this.pwdBox2.Name = "pwdBox2";
             this.pwdBox2.Size = new System.Drawing.Size(120, 20);
-            this.pwdBox2.TabIndex = 3;
+            this.pwdBox2.TabIndex = 4;
             this.pwdBox2.UseSystemPasswordChar = true;
             // 
             // ConfirmBtn
@@ -143,7 +145,7 @@
             this.ConfirmBtn.Location = new System.Drawing.Point(202, 268);
             this.ConfirmBtn.Name = "ConfirmBtn";
             this.ConfirmBtn.Size = new System.Drawing.Size(94, 39);
-            this.ConfirmBtn.TabIndex = 4;
+            this.ConfirmBtn.TabIndex = 5;
             this.ConfirmBtn.Text = "Confirm";
             this.ConfirmBtn.UseVisualStyleBackColor = false;
             this.ConfirmBtn.Click += new System.EventHandler(this.ConfirmBtn_Click);
@@ -171,6 +173,27 @@
             this.label1.Size = new System.Drawing.Size(0, 35);
             this.label1.TabIndex = 11;
             // 
+            // usrBox
+            // 
+            this.usrBox.BackColor = System.Drawing.SystemColors.Control;
+            this.usrBox.Location = new System.Drawing.Point(230, 116);
+            this.usrBox.MaxLength = 16;
+            this.usrBox.Name = "usrBox";
+            this.usrBox.Size = new System.Drawing.Size(120, 20);
+            this.usrBox.TabIndex = 0;
+            // 
+            // usrLabel
+            // 
+            this.usrLabel.BackColor = System.Drawing.Color.Transparent;
+            this.usrLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.usrLabel.ForeColor = System.Drawing.Color.Lime;
+            this.usrLabel.Image = ((System.Drawing.Image)(resources.GetObject("usrLabel.Image")));
+            this.usrLabel.Location = new System.Drawing.Point(124, 117);
+            this.usrLabel.Name = "usrLabel";
+            this.usrLabel.Size = new System.Drawing.Size(101, 32);
+            this.usrLabel.TabIndex = 13;
+            this.usrLabel.Text = "                   ";
+            // 
             // RegForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -178,6 +201,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(484, 362);
+            this.Controls.Add(this.usrLabel);
+            this.Controls.Add(this.usrBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.loginTitle);
             this.Controls.Add(this.ConfirmBtn);
@@ -187,8 +212,8 @@
             this.Controls.Add(this.emailLabel);
             this.Controls.Add(this.emailBox);
             this.Controls.Add(this.pwdBox1);
-            this.Controls.Add(this.usrLabel);
-            this.Controls.Add(this.usrBox);
+            this.Controls.Add(this.kdLabel);
+            this.Controls.Add(this.kdBox);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -196,7 +221,7 @@
             this.MaximumSize = new System.Drawing.Size(500, 400);
             this.MinimumSize = new System.Drawing.Size(500, 400);
             this.Name = "RegForm";
-            this.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.Padding = new System.Windows.Forms.Padding(10);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";
             this.Load += new System.EventHandler(this.RegForm_Load);
@@ -207,8 +232,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox usrBox;
-        private System.Windows.Forms.Label usrLabel;
+        private System.Windows.Forms.TextBox kdBox;
+        private System.Windows.Forms.Label kdLabel;
         private System.Windows.Forms.TextBox pwdBox1;
         private System.Windows.Forms.TextBox emailBox;
         private System.Windows.Forms.Label emailLabel;
@@ -218,5 +243,7 @@
         private System.Windows.Forms.Button ConfirmBtn;
         private System.Windows.Forms.Label loginTitle;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox usrBox;
+        private System.Windows.Forms.Label usrLabel;
     }
 }

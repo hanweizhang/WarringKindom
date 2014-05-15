@@ -33,11 +33,11 @@ namespace Warring_Kingdom
             // kingdom
             this.kingdom.Location = new System.Drawing.Point(startX, this.kingdomLabel.Location.Y + this.kingdomLabel.Height);
             // landLabel
-            this.landLabel.Location = new System.Drawing.Point(startX, this.kingdom.Location.Y + this.kingdom.Height + LINE_SPACE);
+            this.cityLabel.Location = new System.Drawing.Point(startX, this.kingdom.Location.Y + this.kingdom.Height + LINE_SPACE);
             // land
-            this.land.Location = new System.Drawing.Point(startX, this.landLabel.Location.Y + this.landLabel.Height);
+            this.city.Location = new System.Drawing.Point(startX, this.cityLabel.Location.Y + this.cityLabel.Height);
             // armyLabel
-            this.armyLabel.Location = new System.Drawing.Point(startX, this.land.Location.Y + this.land.Height + LINE_SPACE);
+            this.armyLabel.Location = new System.Drawing.Point(startX, this.city.Location.Y + this.city.Height + LINE_SPACE);
             // army
             this.army.Location = new System.Drawing.Point(startX, this.armyLabel.Location.Y + this.armyLabel.Height);
             // goldLabel
@@ -66,7 +66,7 @@ namespace Warring_Kingdom
                         // Name
                         this.name.Text = username;
                         this.kingdom.Text = (String)reader.GetValue(0);
-                        this.land.Text = (String)reader.GetValue(1);
+                        this.city.Text = (String)reader.GetValue(1);
                         this.army.Text = reader.GetValue(2)+"";
                         this.gold.Text = reader.GetValue(3)+"";
                     reader.Close();
