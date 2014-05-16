@@ -16,8 +16,8 @@ namespace Warring_Kingdom
         private int yCor;
         private bool drag;
         private Rectangle disRect;
-        private const int MIN_WIDTH = 800;
-        private const int MIN_HEIGHT = 450;
+        //private const int MIN_WIDTH = 800;
+        //private const int MIN_HEIGHT = 450;
         private Bitmap map;
 
         public GamePanel()
@@ -26,10 +26,10 @@ namespace Warring_Kingdom
             xCor = 0;
             yCor = 0;
             drag = false;
-            this.mapPic.MouseWheel += GamePanel_MouseWheel;
+            //this.mapPic.MouseWheel += GamePanel_MouseWheel;
             map = new Bitmap(this.mapPic.Image);
             // display the entire map at the beginning
-            disRect = new Rectangle(0, 0, map.Width, map.Height);
+            disRect = new Rectangle(map.Width / 4, map.Height / 4, map.Width / 2, map.Height / 2);
             this.mapPic.Image.Dispose();
             this.mapPic.Image = map.Clone(disRect, System.Drawing.Imaging.PixelFormat.Format32bppRgb);
         }
@@ -41,6 +41,7 @@ namespace Warring_Kingdom
             #endregion
         }
         
+        /**
         private void GamePanel_MouseWheel(object sender, MouseEventArgs e)
         {
             #region Code for Zoom
@@ -73,6 +74,7 @@ namespace Warring_Kingdom
             this.mapPic.Image = map.Clone(disRect, System.Drawing.Imaging.PixelFormat.Format32bppRgb);
             #endregion
         } 
+        */
 
         private void GamePanel_MouseDown(object sender, MouseEventArgs e)
         {
@@ -141,9 +143,5 @@ namespace Warring_Kingdom
             #endregion
         }
 
-        private void mapPic_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
