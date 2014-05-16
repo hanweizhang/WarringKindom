@@ -47,6 +47,9 @@
             this.mapPic.MouseEnter += new System.EventHandler(this.GamePanel_MouseEnter);
             this.mapPic.MouseMove += new System.Windows.Forms.MouseEventHandler(this.GamePanel_MouseMove);
             this.mapPic.MouseUp += new System.Windows.Forms.MouseEventHandler(this.GamePanel_MouseUp);
+            //
+            // cityPic
+            //
             // 
             // GamePanel
             // 

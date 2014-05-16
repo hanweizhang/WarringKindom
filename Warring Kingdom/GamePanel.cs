@@ -12,26 +12,56 @@ namespace Warring_Kingdom
 {
     public partial class GamePanel : UserControl
     {
-        private int xCor;
-        private int yCor;
+        //private int xCor;
+        //private int yCor;
+        private Point mouseCor;
         private bool drag;
         private Rectangle disRect;
         //private const int MIN_WIDTH = 800;
         //private const int MIN_HEIGHT = 450;
+        private const int CITY_WIDTH = 50;
+        private const int CITY_HEIGHT = 50;
         private Bitmap map;
+        private Bitmap city;
+        private Rectangle[] cityRect;
 
         public GamePanel()
         {
             InitializeComponent();
-            xCor = 0;
-            yCor = 0;
+            mouseCor = new Point(0, 0);
             drag = false;
             //this.mapPic.MouseWheel += GamePanel_MouseWheel;
             map = new Bitmap(this.mapPic.Image);
-            // display the entire map at the beginning
+            city = new Bitmap(Properties.Resources.building_1);
+            // display the map
             disRect = new Rectangle(map.Width / 4, map.Height / 4, map.Width / 2, map.Height / 2);
             this.mapPic.Image.Dispose();
             this.mapPic.Image = map.Clone(disRect, System.Drawing.Imaging.PixelFormat.Format32bppRgb);
+            // display cities
+            getCities();
+            drawCity();
+        }
+
+        private void getCities()
+        {
+            cityRect = new Rectangle[10];
+            cityRect[0] = new Rectangle(1000,500,CITY_WIDTH,CITY_HEIGHT);
+        }
+
+        private void drawCity()
+        {
+            foreach (Rectangle c in cityRect)
+            {
+                if (disRect.IntersectsWith(c))
+                {
+                    Rectangle disCity = new Rectangle(c.X,c.Y,c.Width,c.Height);
+                    disCity.Intersect(disRect);
+                    disCity.X = disCity.X;
+                    disCity.Y = disCity.Y;
+                    Image cityImg = city.Clone(new Rectangle(disCity.X - c.X, disCity.Y - c.Y, disCity.Width, disCity.Height), System.Drawing.Imaging.PixelFormat.Format32bppRgb);
+                    Graphics.FromImage(this.mapPic.Image).DrawImage(cityImg,disCity);
+                }
+            }
         }
 
         private void GamePanel_MouseEnter(object sender, EventArgs e)
@@ -81,8 +111,8 @@ namespace Warring_Kingdom
             #region Code for Drag
             if (e.Button == MouseButtons.Left)
             {
-                xCor = e.X;
-                yCor = e.Y;
+                mouseCor.X = e.X;
+                mouseCor.Y = e.Y;
                 drag = true;
             } 
             #endregion
@@ -93,8 +123,8 @@ namespace Warring_Kingdom
             #region Code for Drag
             if (drag)
             {
-                int deltaX = e.X - xCor;
-                int deltaY = e.Y - yCor;
+                int deltaX = e.X - mouseCor.X;
+                int deltaY = e.Y - mouseCor.Y;
                 if ((disRect.X - deltaX) > 0)
                 {
                     if ((disRect.X - deltaX) < map.Width - disRect.Width)
@@ -127,10 +157,11 @@ namespace Warring_Kingdom
                 }
                 this.mapPic.Image.Dispose();
                 this.mapPic.Image = map.Clone(disRect, System.Drawing.Imaging.PixelFormat.Format32bppRgb);
-                xCor = e.X;
-                yCor = e.Y;
+                mouseCor.X = e.X;
+                mouseCor.Y = e.Y;
             } 
             #endregion
+            drawCity();
         }
 
         private void GamePanel_MouseUp(object sender, MouseEventArgs e)
@@ -142,6 +173,5 @@ namespace Warring_Kingdom
             } 
             #endregion
         }
-
     }
 }
