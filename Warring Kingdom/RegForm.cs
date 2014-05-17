@@ -68,30 +68,28 @@ namespace Warring_Kingdom
             try
             {
                 // connect to the server
-                String connectStr = "server=titan.csse.rose-hulman.edu; uid=wkuser; pwd=wkuser; database=WarKing";
+                String connectStr = "server=titan.csse.rose-hulman.edu; uid=zhangh; pwd=Zhw628zhw628; database=WarKing";
                 SqlConnection conn = new SqlConnection(connectStr);
                 conn.Open();
                 // insert the user information into the database
                 try
                 {
-                    // check if username already exist
-                    SqlCommand checkComm = new SqlCommand("SELECT * FROM [UserInfo] WHERE Username='" + this.kdBox.Text + "'", conn);
+                    string str = "EXEC Register @username='"+this.usrBox.Text+"', @userpassword='"+this.pwdBox1.Text+"', @email='"+this.emailBox.Text+"', @kingdomname='"+this.kdBox.Text+"'";
+                    SqlCommand checkComm = new SqlCommand(str, conn);
                     SqlDataReader reader = checkComm.ExecuteReader();
                     if (reader.Read())
                     {
-                        MessageBox.Show("Username already taken");
+                        switch ((int)reader.GetValue(0))
+                        {
+                            case 1: MessageBox.Show("Username already taken"); break;
+                            case 2: MessageBox.Show("Email already taken"); break;
+                            case 3: MessageBox.Show("Kingdom name already taken"); break;
+                            default: MessageBox.Show("Error"); break;
+                        }
                         conn.Close();
                         return false;
                     }
                     reader.Close();
-                    // create the user
-                    SqlCommand insertComm = new SqlCommand("INSERT INTO [UserInfo](Username,[Email],Userpassword) VALUES('" + this.kdBox.Text + "','" + this.emailBox.Text + "','" + this.pwdBox1.Text + "')", conn);
-                    int result = insertComm.ExecuteNonQuery();
-                    if(result!=1){
-                        MessageBox.Show("Fail to create the user, try again");
-                        conn.Close();
-                        return false;
-                    }
                 }
                 catch (Exception e)
                 {

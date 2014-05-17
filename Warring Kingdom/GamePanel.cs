@@ -24,7 +24,9 @@ namespace Warring_Kingdom
         private const int CITY_HEIGHT = 100;
         private Bitmap map;
         private Bitmap city;
-        private Rectangle[] cityRect;
+        private Bitmap empty;
+        private Rectangle[] landRect;
+        private bool[] hasCity;
         private string username;
         private GameForm gameForm;
 
@@ -36,6 +38,7 @@ namespace Warring_Kingdom
             //this.mapPic.MouseWheel += GamePanel_MouseWheel;
             map = new Bitmap(this.mapPic.Image);
             city = new Bitmap(Properties.Resources.icon_2);
+            empty = new Bitmap(Properties.Resources.icon_1);
             // display the map
             //disRect = new Rectangle(map.Width / 4, map.Height / 4, map.Width / 2, map.Height / 2);
             //this.mapPic.Image.Dispose();
@@ -57,26 +60,24 @@ namespace Warring_Kingdom
 
         private void getCities()
         {
-            cityRect = new Rectangle[10];
-            cityRect[0] = new Rectangle(500,500,CITY_WIDTH,CITY_HEIGHT);
+            landRect = new Rectangle[10];
+            hasCity = new bool[10];
+            landRect[0] = new Rectangle(500,500,CITY_WIDTH,CITY_HEIGHT);
         }
 
         private void drawCity()
         {
-            foreach (Rectangle c in cityRect)
+            for (int i = 0; i < landRect.Length;i++ )
             {
-                /**
-                if (disRect.IntersectsWith(c))
+                if (hasCity[i])
                 {
-                    Rectangle disCity = new Rectangle(c.X,c.Y,c.Width,c.Height);
-                    disCity.Intersect(disRect);
-                    disCity.X = disCity.X;
-                    disCity.Y = disCity.Y;
-                    Image cityImg = city.Clone(new Rectangle(disCity.X - c.X, disCity.Y - c.Y, disCity.Width, disCity.Height), System.Drawing.Imaging.PixelFormat.Format32bppRgb);
-                    Graphics.FromImage(this.mapPic.Image).DrawImage(cityImg,disCity);
+                    Graphics.FromImage(this.mapPic.Image).DrawImage(city, landRect[i]);
                 }
-                */
-                Graphics.FromImage(this.mapPic.Image).DrawImage(city, c);
+                else
+                {
+                    Graphics.FromImage(this.mapPic.Image).DrawImage(empty, landRect[i]);
+                }
+                
             }
         }
 
@@ -260,7 +261,7 @@ namespace Warring_Kingdom
             }
         }
 
-        private void disEmptyLand(string LanName)
+        private void disEmptyLand(string LandName)
         {
             throw new NotImplementedException();
         }

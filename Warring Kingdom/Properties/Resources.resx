@@ -157,4 +157,40 @@
   <data name="empty_land" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\empty land.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="building1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\building1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="building10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\building10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="building11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\building11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="building2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\building2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="building3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\building3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="building4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\building4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="building5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\building5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="building6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\building6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="building7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\building7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="building8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\building8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="building9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\building9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="building_highlight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\building_highlight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

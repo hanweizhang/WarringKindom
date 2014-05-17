@@ -73,7 +73,8 @@
             // 
             // titlePanel
             // 
-            this.titlePanel.BackColor = System.Drawing.SystemColors.Control;
+            this.titlePanel.BackColor = System.Drawing.Color.Transparent;
+            this.titlePanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("titlePanel.BackgroundImage")));
             this.titlePanel.Controls.Add(this.title);
             this.titlePanel.Location = new System.Drawing.Point(308, 12);
             this.titlePanel.Name = "titlePanel";

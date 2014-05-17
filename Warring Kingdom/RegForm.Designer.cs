@@ -47,7 +47,7 @@
             // kdBox
             // 
             this.kdBox.BackColor = System.Drawing.SystemColors.Control;
-            this.kdBox.Location = new System.Drawing.Point(230, 142);
+            this.kdBox.Location = new System.Drawing.Point(263, 141);
             this.kdBox.MaxLength = 16;
             this.kdBox.Name = "kdBox";
             this.kdBox.Size = new System.Drawing.Size(120, 20);
@@ -59,16 +59,16 @@
             this.kdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.kdLabel.ForeColor = System.Drawing.Color.Lime;
             this.kdLabel.Image = ((System.Drawing.Image)(resources.GetObject("kdLabel.Image")));
-            this.kdLabel.Location = new System.Drawing.Point(123, 143);
+            this.kdLabel.Location = new System.Drawing.Point(58, 130);
             this.kdLabel.Name = "kdLabel";
-            this.kdLabel.Size = new System.Drawing.Size(101, 32);
+            this.kdLabel.Size = new System.Drawing.Size(190, 42);
             this.kdLabel.TabIndex = 6;
             this.kdLabel.Text = "                   ";
             // 
             // pwdBox1
             // 
             this.pwdBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.pwdBox1.Location = new System.Drawing.Point(230, 194);
+            this.pwdBox1.Location = new System.Drawing.Point(263, 220);
             this.pwdBox1.MaxLength = 16;
             this.pwdBox1.Name = "pwdBox1";
             this.pwdBox1.Size = new System.Drawing.Size(120, 20);
@@ -78,7 +78,7 @@
             // emailBox
             // 
             this.emailBox.BackColor = System.Drawing.SystemColors.Control;
-            this.emailBox.Location = new System.Drawing.Point(230, 168);
+            this.emailBox.Location = new System.Drawing.Point(263, 180);
             this.emailBox.MaxLength = 50;
             this.emailBox.Name = "emailBox";
             this.emailBox.Size = new System.Drawing.Size(120, 20);
@@ -90,9 +90,9 @@
             this.emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.emailLabel.ForeColor = System.Drawing.Color.Lime;
             this.emailLabel.Image = ((System.Drawing.Image)(resources.GetObject("emailLabel.Image")));
-            this.emailLabel.Location = new System.Drawing.Point(163, 168);
+            this.emailLabel.Location = new System.Drawing.Point(172, 172);
             this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(62, 34);
+            this.emailLabel.Size = new System.Drawing.Size(85, 49);
             this.emailLabel.TabIndex = 7;
             this.emailLabel.Text = "             ";
             // 
@@ -102,9 +102,9 @@
             this.pwdLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.pwdLabel1.ForeColor = System.Drawing.Color.Lime;
             this.pwdLabel1.Image = ((System.Drawing.Image)(resources.GetObject("pwdLabel1.Image")));
-            this.pwdLabel1.Location = new System.Drawing.Point(125, 194);
+            this.pwdLabel1.Location = new System.Drawing.Point(120, 220);
             this.pwdLabel1.Name = "pwdLabel1";
-            this.pwdLabel1.Size = new System.Drawing.Size(99, 37);
+            this.pwdLabel1.Size = new System.Drawing.Size(137, 37);
             this.pwdLabel1.TabIndex = 8;
             this.pwdLabel1.Text = "                         ";
             // 
@@ -114,16 +114,16 @@
             this.pwdLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.pwdLabel2.ForeColor = System.Drawing.Color.Lime;
             this.pwdLabel2.Image = ((System.Drawing.Image)(resources.GetObject("pwdLabel2.Image")));
-            this.pwdLabel2.Location = new System.Drawing.Point(41, 220);
+            this.pwdLabel2.Location = new System.Drawing.Point(5, 257);
             this.pwdLabel2.Name = "pwdLabel2";
-            this.pwdLabel2.Size = new System.Drawing.Size(183, 35);
+            this.pwdLabel2.Size = new System.Drawing.Size(255, 35);
             this.pwdLabel2.TabIndex = 9;
             this.pwdLabel2.Text = "                           ";
             // 
             // pwdBox2
             // 
             this.pwdBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.pwdBox2.Location = new System.Drawing.Point(230, 220);
+            this.pwdBox2.Location = new System.Drawing.Point(263, 259);
             this.pwdBox2.MaxLength = 16;
             this.pwdBox2.Name = "pwdBox2";
             this.pwdBox2.Size = new System.Drawing.Size(120, 20);
@@ -142,7 +142,7 @@
             this.ConfirmBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ConfirmBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.ConfirmBtn.ForeColor = System.Drawing.Color.Gold;
-            this.ConfirmBtn.Location = new System.Drawing.Point(202, 268);
+            this.ConfirmBtn.Location = new System.Drawing.Point(195, 310);
             this.ConfirmBtn.Name = "ConfirmBtn";
             this.ConfirmBtn.Size = new System.Drawing.Size(94, 39);
             this.ConfirmBtn.TabIndex = 5;
@@ -156,7 +156,7 @@
             this.loginTitle.Font = new System.Drawing.Font("Snap ITC", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginTitle.ForeColor = System.Drawing.Color.Tomato;
             this.loginTitle.Image = ((System.Drawing.Image)(resources.GetObject("loginTitle.Image")));
-            this.loginTitle.Location = new System.Drawing.Point(-21, 10);
+            this.loginTitle.Location = new System.Drawing.Point(-26, 14);
             this.loginTitle.Name = "loginTitle";
             this.loginTitle.Size = new System.Drawing.Size(535, 67);
             this.loginTitle.TabIndex = 10;
@@ -176,7 +176,7 @@
             // usrBox
             // 
             this.usrBox.BackColor = System.Drawing.SystemColors.Control;
-            this.usrBox.Location = new System.Drawing.Point(230, 116);
+            this.usrBox.Location = new System.Drawing.Point(263, 97);
             this.usrBox.MaxLength = 16;
             this.usrBox.Name = "usrBox";
             this.usrBox.Size = new System.Drawing.Size(120, 20);
@@ -188,9 +188,9 @@
             this.usrLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.usrLabel.ForeColor = System.Drawing.Color.Lime;
             this.usrLabel.Image = ((System.Drawing.Image)(resources.GetObject("usrLabel.Image")));
-            this.usrLabel.Location = new System.Drawing.Point(124, 117);
+            this.usrLabel.Location = new System.Drawing.Point(121, 96);
             this.usrLabel.Name = "usrLabel";
-            this.usrLabel.Size = new System.Drawing.Size(101, 32);
+            this.usrLabel.Size = new System.Drawing.Size(127, 34);
             this.usrLabel.TabIndex = 13;
             this.usrLabel.Text = "                   ";
             // 
