@@ -13,7 +13,7 @@ namespace Warring_Kingdom
 {
     public partial class InfoPanel : UserControl
     {
-        private const int LINE_SPACE = 25;
+        private const int LINE_SPACE = 40;
 
         public InfoPanel()
         {
@@ -32,12 +32,8 @@ namespace Warring_Kingdom
             this.kingdomLabel.Location = new System.Drawing.Point(startX, this.name.Location.Y + this.name.Height+LINE_SPACE);
             // kingdom
             this.kingdom.Location = new System.Drawing.Point(startX, this.kingdomLabel.Location.Y + this.kingdomLabel.Height);
-            // landLabel
-            this.cityLabel.Location = new System.Drawing.Point(startX, this.kingdom.Location.Y + this.kingdom.Height + LINE_SPACE);
-            // land
-            this.city.Location = new System.Drawing.Point(startX, this.cityLabel.Location.Y + this.cityLabel.Height);
             // armyLabel
-            this.armyLabel.Location = new System.Drawing.Point(startX, this.city.Location.Y + this.city.Height + LINE_SPACE);
+            this.armyLabel.Location = new System.Drawing.Point(startX, this.kingdom.Location.Y + this.kingdom.Height + LINE_SPACE);
             // army
             this.army.Location = new System.Drawing.Point(startX, this.armyLabel.Location.Y + this.armyLabel.Height);
             // goldLabel
@@ -51,24 +47,20 @@ namespace Warring_Kingdom
             try
             {
                 // connect to the server
-                String connectStr = "server=titan.csse.rose-hulman.edu; uid=wkuser; pwd=wkuser; database=WarKing";
+                String connectStr = "server=titan.csse.rose-hulman.edu; uid=zhangh; pwd=Zhw628zhw628; database=WarKing";
                 SqlConnection conn = new SqlConnection(connectStr);
                 conn.Open();
                 // get the information
                 try
                 {
-                    String comm = "SELECT D.KingdomName, D.LandName, D.Army, D.Gold "+
-                                    "FROM DisplayKingdom D, UserInfo U "+
-                                    "WHERE D.UserID = U.UserID AND U.Username = '" + username + "'";
+                    String comm = "EXEC GetInfo @username='"+username+"'";
                     SqlCommand selectComm = new SqlCommand(comm, conn);
                     SqlDataReader reader = selectComm.ExecuteReader();
                     reader.Read();
-                        // Name
-                        this.name.Text = username;
-                        this.kingdom.Text = (String)reader.GetValue(0);
-                        this.city.Text = (String)reader.GetValue(1);
-                        this.army.Text = reader.GetValue(2)+"";
-                        this.gold.Text = reader.GetValue(3)+"";
+                    this.name.Text = username;
+                    this.kingdom.Text = (String)reader.GetValue(0);
+                    this.army.Text = reader.GetValue(1)+"";
+                    this.gold.Text = reader.GetValue(2)+"";
                     reader.Close();
                 }
                 catch (Exception e)

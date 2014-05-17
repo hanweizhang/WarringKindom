@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameForm));
             this.menuBtn = new System.Windows.Forms.Button();
-            this.cityBtn1 = new System.Windows.Forms.Button();
-            this.cityBtn2 = new System.Windows.Forms.Button();
             this.title = new System.Windows.Forms.Label();
             this.titlePanel = new System.Windows.Forms.Panel();
             this.gamePanel1 = new Warring_Kingdom.GamePanel();
@@ -59,44 +57,6 @@
             this.menuBtn.UseVisualStyleBackColor = true;
             this.menuBtn.Click += new System.EventHandler(this.menuBtn_Click);
             // 
-            // cityBtn1
-            // 
-            this.cityBtn1.BackColor = System.Drawing.Color.Transparent;
-            this.cityBtn1.BackgroundImage = global::Warring_Kingdom.Properties.Resources.icon_1;
-            this.cityBtn1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cityBtn1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cityBtn1.FlatAppearance.BorderSize = 0;
-            this.cityBtn1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.cityBtn1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.cityBtn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cityBtn1.ForeColor = System.Drawing.Color.Transparent;
-            this.cityBtn1.Location = new System.Drawing.Point(116, 522);
-            this.cityBtn1.Margin = new System.Windows.Forms.Padding(0);
-            this.cityBtn1.Name = "cityBtn1";
-            this.cityBtn1.Size = new System.Drawing.Size(64, 64);
-            this.cityBtn1.TabIndex = 0;
-            this.cityBtn1.UseVisualStyleBackColor = true;
-            this.cityBtn1.Click += new System.EventHandler(this.cityBtn_Click);
-            // 
-            // cityBtn2
-            // 
-            this.cityBtn2.BackColor = System.Drawing.Color.Transparent;
-            this.cityBtn2.BackgroundImage = global::Warring_Kingdom.Properties.Resources.icon_2;
-            this.cityBtn2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cityBtn2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cityBtn2.FlatAppearance.BorderSize = 0;
-            this.cityBtn2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.cityBtn2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.cityBtn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cityBtn2.ForeColor = System.Drawing.Color.Transparent;
-            this.cityBtn2.Location = new System.Drawing.Point(116, 606);
-            this.cityBtn2.Margin = new System.Windows.Forms.Padding(0);
-            this.cityBtn2.Name = "cityBtn2";
-            this.cityBtn2.Size = new System.Drawing.Size(64, 64);
-            this.cityBtn2.TabIndex = 0;
-            this.cityBtn2.UseVisualStyleBackColor = true;
-            this.cityBtn2.Click += new System.EventHandler(this.cityBtn_Click);
-            // 
             // title
             // 
             this.title.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -113,6 +73,7 @@
             // 
             // titlePanel
             // 
+            this.titlePanel.BackColor = System.Drawing.SystemColors.Control;
             this.titlePanel.Controls.Add(this.title);
             this.titlePanel.Location = new System.Drawing.Point(308, 12);
             this.titlePanel.Name = "titlePanel";
@@ -124,7 +85,7 @@
             this.gamePanel1.BackColor = System.Drawing.Color.Transparent;
             this.gamePanel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.gamePanel1.Location = new System.Drawing.Point(275, 76);
-            this.gamePanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gamePanel1.Margin = new System.Windows.Forms.Padding(4);
             this.gamePanel1.Name = "gamePanel1";
             this.gamePanel1.Size = new System.Drawing.Size(1600, 900);
             this.gamePanel1.TabIndex = 3;
@@ -148,8 +109,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.gamePanel1);
-            this.Controls.Add(this.cityBtn1);
-            this.Controls.Add(this.cityBtn2);
             this.Controls.Add(this.titlePanel);
             this.Controls.Add(this.infoPanel1);
             this.Controls.Add(this.menuBtn);
@@ -169,8 +128,6 @@
         #endregion
 
         private System.Windows.Forms.Button menuBtn;
-        private System.Windows.Forms.Button cityBtn1;
-        private System.Windows.Forms.Button cityBtn2;
         private InfoPanel infoPanel1;
         private System.Windows.Forms.Label title;
         private System.Windows.Forms.Panel titlePanel;

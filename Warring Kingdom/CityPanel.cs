@@ -12,11 +12,13 @@ namespace Warring_Kingdom
 {
     public partial class CityPanel : UserControl
     {
-        public CityPanel(GameForm gameForm)
+        private GamePanel gamePanel;
+
+        public CityPanel(string cityName, GamePanel gamePanel)
         {
             InitializeComponent();
+            this.gamePanel = gamePanel;
             this.currentEmptyLand = new System.Windows.Forms.Button();
-            this.gameForm = gameForm;
         }
 
 
@@ -49,9 +51,8 @@ namespace Warring_Kingdom
 
         private void backBtn_Click(object sender, EventArgs e)
         {
-            this.gameForm.cityExit();
+            this.gamePanel.Show();
             this.Dispose();
-            
         }
 
         private void constructNewBuilding(Point location)
@@ -78,7 +79,6 @@ namespace Warring_Kingdom
         }
 
         private System.Windows.Forms.Button currentEmptyLand;
-        private GameForm gameForm;
 
     }
 }

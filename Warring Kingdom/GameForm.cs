@@ -18,7 +18,6 @@ namespace Warring_Kingdom
         public GameForm()
         {
             InitializeComponent();
-            this.cityPanel = new CityPanel(this);
             this.title.Location = new System.Drawing.Point(this.titlePanel.Width/2-this.title.Width/2, this.titlePanel.Height/2-this.title.Height/2);
         }
 
@@ -26,8 +25,9 @@ namespace Warring_Kingdom
         {
             this.username = username;
             InitializeComponent();
-            this.cityPanel = new CityPanel(this);
             this.title.Location = new System.Drawing.Point(this.titlePanel.Width / 2 - this.title.Width / 2, this.titlePanel.Height / 2 - this.title.Height / 2);
+            this.gamePanel1.setUser(username);
+            this.gamePanel1.setForm(this);
             initInfoPanel(username);
         }
 
@@ -36,40 +36,14 @@ namespace Warring_Kingdom
             this.infoPanel1.getData(username);
         }
 
+        public void setTitle(string title)
+        {
+            this.title.Text = title;
+        }
+
         private void menuBtn_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-        private void cityBtn_Click(object sender, EventArgs e)
-        {
-            cityEnter();
-            this.Controls.Add(new CityPanel(this));
-        }
-
-        public void cityEnter()
-        {
-            this.gamePanel1.Hide();
-            //this.cityBtn1.Hide();
-            //this.cityBtn2.Hide();
-            //this.menuBtn.Hide();
-            //this.titlePanel.Hide();
-        }
-
-        public void cityExit()
-        {
-            this.gamePanel1.Show();
-            //this.cityBtn1.Show();
-            //this.cityBtn2.Show();
-            //this.menuBtn.Show();
-            //this.titlePanel.Show();
-        }
-
-        public void saveCity(CityPanel cityPanel)
-        {
-            this.cityPanel = cityPanel;
-        }
-
-        private CityPanel cityPanel;
     }
 }
