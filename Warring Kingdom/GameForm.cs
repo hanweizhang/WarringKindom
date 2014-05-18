@@ -18,7 +18,7 @@ namespace Warring_Kingdom
         public GameForm()
         {
             InitializeComponent();
-            this.title.Location = new System.Drawing.Point(this.titlePanel.Width/2-this.title.Width/2, this.titlePanel.Height/2-this.title.Height/2);
+            this.title.Location = new System.Drawing.Point(this.titlePanel.Width/2-this.title.Width/2, this.titlePanel.Height/2-this.title.Height/2-2);
         }
 
         public GameForm(string username)

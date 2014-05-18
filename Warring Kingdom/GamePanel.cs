@@ -20,8 +20,9 @@ namespace Warring_Kingdom
         //private Rectangle disRect;
         //private const int MIN_WIDTH = 800;
         //private const int MIN_HEIGHT = 450;
-        private const int CITY_WIDTH = 100;
-        private const int CITY_HEIGHT = 100;
+        private const int LAND_WIDTH = 100;
+        private const int LAND_HEIGHT = 100;
+        private const int LAND_NUM = 10;
         private Bitmap map;
         private Bitmap city;
         private Bitmap empty;
@@ -37,8 +38,8 @@ namespace Warring_Kingdom
             //drag = false;
             //this.mapPic.MouseWheel += GamePanel_MouseWheel;
             map = new Bitmap(this.mapPic.Image);
-            city = new Bitmap(Properties.Resources.icon_2);
-            empty = new Bitmap(Properties.Resources.icon_1);
+            city = new Bitmap(Properties.Resources.fortress1);
+            empty = new Bitmap(Properties.Resources.empty);
             // display the map
             //disRect = new Rectangle(map.Width / 4, map.Height / 4, map.Width / 2, map.Height / 2);
             //this.mapPic.Image.Dispose();
@@ -60,9 +61,39 @@ namespace Warring_Kingdom
 
         private void getCities()
         {
-            landRect = new Rectangle[10];
-            hasCity = new bool[10];
-            landRect[0] = new Rectangle(500,500,CITY_WIDTH,CITY_HEIGHT);
+            landRect = new Rectangle[LAND_NUM];
+            hasCity = new bool[LAND_NUM];
+            try
+            {
+                // connect to the server
+                String connectStr = "server=titan.csse.rose-hulman.edu; uid=zhangh; pwd=Zhw628zhw628; database=WarKing";
+                SqlConnection conn = new SqlConnection(connectStr);
+                conn.Open();
+                // get the information
+                try
+                {
+                    String comm = "EXEC GetCity";
+                    SqlCommand selectComm = new SqlCommand(comm, conn);
+                    SqlDataReader reader = selectComm.ExecuteReader();
+                    for (int i = 0; i < LAND_NUM; i++)
+                    {
+                        reader.Read();
+                        landRect[i] = new Rectangle((int)reader.GetValue(0) - LAND_WIDTH / 2, (int)reader.GetValue(1) - LAND_HEIGHT/2, LAND_WIDTH, LAND_HEIGHT);
+                        hasCity[i] = ((int)reader.GetValue(2))==0?false:true;
+                    }
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void drawCity()

@@ -16,10 +16,10 @@ namespace Warring_Kingdom
         private GamePanel gamePanel;
         private const int LAND_WIDTH = 269;
         private const int LAND_HEIGHT = 109;
-        private const int BDPIC_WIDTH = 50;
-        private const int BDPIC_HEIGHT = 50;
-        private const int LANDPIC_WIDTH = 50;
-        private const int LANDPIC_HEIGHT = 50;
+        private const int BDPIC_WIDTH = 111;
+        private const int BDPIC_HEIGHT = 86;
+        private const int LANDPIC_WIDTH = 436;
+        private const int LANDPIC_HEIGHT = 158;
         private Rectangle[] checkMouse = new Rectangle[9];
         private Point[] centerPoint = new Point[9];
         private bool[] isEmpty = new bool[9];
@@ -51,6 +51,7 @@ namespace Warring_Kingdom
 
             this.gamePanel = gamePanel;
             initLand(cityName);
+
         }
 
         private void initLand(string cityName)
@@ -70,7 +71,7 @@ namespace Warring_Kingdom
                     for (int i = 0; i < 9; i++)
                     {
                         reader.Read();
-                        switch ((string)reader.GetValue(1))
+                        switch ((string)reader.GetValue(0))
                         {
                             case "barrack": bdPic[i] = new Bitmap(Properties.Resources.building1); isEmpty[i] = false; break;
                             case "smithy": bdPic[i] = new Bitmap(Properties.Resources.building2); isEmpty[i] = false; break;
@@ -105,19 +106,17 @@ namespace Warring_Kingdom
 
         private void drawLand()
         {
-
             for (int i = 0; i < 9; i++)
             {
                 if (isEmpty[i] != true)
                 {
-                    Graphics.FromImage(this.cityPic.Image).DrawImage(bdPic[i], new Rectangle(centerPoint[i].X - BDPIC_WIDTH, centerPoint[i].Y - BDPIC_HEIGHT, BDPIC_WIDTH, BDPIC_HEIGHT));
+                    Graphics.FromImage(this.cityPic.Image).DrawImage(bdPic[i], new Rectangle(centerPoint[i].X - BDPIC_WIDTH/2, centerPoint[i].Y - BDPIC_HEIGHT/2, BDPIC_WIDTH, BDPIC_HEIGHT));
                 }
                 else if(bdPic[i]!=null)
                 {
-                    Graphics.FromImage(this.cityPic.Image).DrawImage(bdPic[i], new Rectangle(centerPoint[i].X - LANDPIC_WIDTH, centerPoint[i].Y - LANDPIC_HEIGHT, LANDPIC_WIDTH, LANDPIC_HEIGHT));
+                    Graphics.FromImage(this.cityPic.Image).DrawImage(bdPic[i], new Rectangle(centerPoint[i].X - LANDPIC_WIDTH/2, centerPoint[i].Y - LANDPIC_HEIGHT/2, LANDPIC_WIDTH, LANDPIC_HEIGHT));
                 }
             }
-            
         }
 
         private void backBtn_Click(object sender, EventArgs e)
@@ -130,28 +129,24 @@ namespace Warring_Kingdom
             this.cityPic.Focus();
         }
 
-        private void CityPanel_MouseHover(object sender, EventArgs e)
+        private void CityPanel_MouseMove(object sender, MouseEventArgs e)
         {
-            bool isHightlight = false;
             for (int i = 0; i < 9; i++)
             {
-                if (checkMouse[i].Contains(MousePosition.X,MousePosition.Y) && isEmpty[i] == true)
+                if (isEmpty[i])
                 {
-                    // highlight
-                    bdPic[i] = new Bitmap(Properties.Resources.building_highlight);
-                    isHightlight = true;
-                }
-            }
-            if (!isHightlight)
-            {
-                for (int i = 0; i < 9; i++)
-                {
-                    if (isEmpty[i] == true)
+                    if (checkMouse[i].Contains(e.X, e.Y))
+                    {
+                        // highlight
+                        bdPic[i] = new Bitmap(Properties.Resources.building_1);
+                    }
+                    else
                     {
                         bdPic[i] = null;
                     }
                 }
             }
+            drawLand();
         }
 
         private void CityPanel_MouseDown(object sender, MouseEventArgs e)
@@ -160,11 +155,13 @@ namespace Warring_Kingdom
             {
                 for (int i = 0; i < 9; i++)
                 {
-                    if (checkMouse[i].Contains(e.X, e.Y)&&isEmpty[i]==true)
+                    if (checkMouse[i].Contains(e.X, e.Y)&&isEmpty[i])
                     {
                         // pop up construction panel
+                        MessageBox.Show(i+"");
                     }
                 }
+                drawLand();
             }
         }
     }

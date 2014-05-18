@@ -65,7 +65,7 @@
             this.cityPic.TabStop = false;
             this.cityPic.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CityPanel_MouseDown);
             this.cityPic.MouseEnter += new System.EventHandler(this.CityPanel_MouseEnter);
-            this.cityPic.MouseHover += new System.EventHandler(this.CityPanel_MouseHover);
+            this.cityPic.MouseMove += new System.Windows.Forms.MouseEventHandler(this.CityPanel_MouseMove);
             // 
             // CityPanel
             // 
