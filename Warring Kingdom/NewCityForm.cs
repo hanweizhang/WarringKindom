@@ -15,12 +15,14 @@ namespace Warring_Kingdom
     {
         private string username;
         private string landname;
+        private GameForm gameForm;
 
-        public NewCityForm(string username, string landname)
+        public NewCityForm(string username, string landname, GameForm gameForm)
         {
             InitializeComponent();
             this.username = username;
             this.landname = landname;
+            this.gameForm = gameForm;
         }
 
         private void ConfirmBtn_Click(object sender, EventArgs e)
@@ -58,6 +60,7 @@ namespace Warring_Kingdom
                 {
                     MessageBox.Show(ex.ToString());
                 }
+                this.gameForm.refreshMap();
                 this.Dispose();
             }
         }

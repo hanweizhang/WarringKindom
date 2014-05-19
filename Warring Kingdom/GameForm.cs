@@ -39,11 +39,36 @@ namespace Warring_Kingdom
         public void setTitle(string title)
         {
             this.title.Text = title;
+            this.title.Location = new System.Drawing.Point(this.titlePanel.Width / 2 - this.title.Width / 2, this.titlePanel.Height / 2 - this.title.Height / 2 - 2);
         }
 
         private void menuBtn_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        public void refreshMap()
+        {
+            this.gamePanel1.Dispose();
+            this.gamePanel1 = new Warring_Kingdom.GamePanel();
+            this.gamePanel1.setUser(username);
+            this.gamePanel1.setForm(this);
+            // 
+            // gamePanel1
+            // 
+            this.gamePanel1.BackColor = System.Drawing.Color.Transparent;
+            this.gamePanel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.gamePanel1.Location = new System.Drawing.Point(275, 100);
+            this.gamePanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.gamePanel1.Name = "gamePanel1";
+            this.gamePanel1.Size = new System.Drawing.Size(1600, 900);
+            this.gamePanel1.TabIndex = 3;
+            this.Controls.Add(this.gamePanel1);
+        }
+
+        private void RefreshBtn_Click(object sender, EventArgs e)
+        {
+            refreshMap();
         }
     }
 }

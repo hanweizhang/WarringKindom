@@ -294,13 +294,14 @@ namespace Warring_Kingdom
 
         private void disEmptyLand(string LandName)
         {
-            Form newCity = new NewCityForm(this.username, LandName);
+            Form newCity = new NewCityForm(this.username, LandName, this.gameForm);
             newCity.ShowDialog();
         }
 
         private void disOtherCity(string cityName)
         {
-            throw new NotImplementedException();
+            Form otherCity = new OtherCityInfo(this.username, cityName, this.gameForm);
+            otherCity.ShowDialog();
         }
 
         private void disOwnCity(string cityName)

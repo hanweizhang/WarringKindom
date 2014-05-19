@@ -72,3 +72,4 @@ C:\Users\zhangh\Documents\GitHub\WarringKindom\Warring Kingdom\obj\Debug\Warring
 C:\Users\zhangh\Documents\GitHub\WarringKindom\Warring Kingdom\obj\Debug\Warring Kingdom.csproj.GenerateResource.Cache
 C:\Users\zhangh\Documents\GitHub\WarringKindom\Warring Kingdom\obj\Debug\Warring_Kingdom.ConstructionPanel.resources
 C:\Users\zhangh\Documents\GitHub\WarringKindom\Warring Kingdom\obj\Debug\Warring_Kingdom.NewCityForm.resources
+C:\Users\zhangh\Documents\GitHub\WarringKindom\Warring Kingdom\obj\Debug\Warring_Kingdom.OtherCityInfo.resources

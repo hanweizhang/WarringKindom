@@ -34,6 +34,7 @@
             this.titlePanel = new System.Windows.Forms.Panel();
             this.gamePanel1 = new Warring_Kingdom.GamePanel();
             this.infoPanel1 = new Warring_Kingdom.InfoPanel();
+            this.RefreshBtn = new System.Windows.Forms.Button();
             this.titlePanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -103,6 +104,26 @@
             this.infoPanel1.Size = new System.Drawing.Size(250, 500);
             this.infoPanel1.TabIndex = 1;
             // 
+            // RefreshBtn
+            // 
+            this.RefreshBtn.BackColor = System.Drawing.Color.Transparent;
+            this.RefreshBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("RefreshBtn.BackgroundImage")));
+            this.RefreshBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RefreshBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RefreshBtn.FlatAppearance.BorderSize = 0;
+            this.RefreshBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.RefreshBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.RefreshBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RefreshBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.RefreshBtn.ForeColor = System.Drawing.Color.Gold;
+            this.RefreshBtn.Location = new System.Drawing.Point(284, 109);
+            this.RefreshBtn.Name = "RefreshBtn";
+            this.RefreshBtn.Size = new System.Drawing.Size(90, 35);
+            this.RefreshBtn.TabIndex = 16;
+            this.RefreshBtn.Text = "Refresh";
+            this.RefreshBtn.UseVisualStyleBackColor = false;
+            this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click);
+            // 
             // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -110,6 +131,7 @@
             this.BackgroundImage = global::Warring_Kingdom.Properties.Resources.main;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.RefreshBtn);
             this.Controls.Add(this.gamePanel1);
             this.Controls.Add(this.titlePanel);
             this.Controls.Add(this.infoPanel1);
@@ -123,6 +145,7 @@
             this.titlePanel.ResumeLayout(false);
             this.titlePanel.PerformLayout();
             this.ResumeLayout(false);
+
         }
 
         #endregion
@@ -132,6 +155,7 @@
         private System.Windows.Forms.Label title;
         private System.Windows.Forms.Panel titlePanel;
         private GamePanel gamePanel1;
+        private System.Windows.Forms.Button RefreshBtn;
 
     }
 }
