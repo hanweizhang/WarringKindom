@@ -69,7 +69,7 @@
             this.title.Name = "title";
             this.title.Size = new System.Drawing.Size(66, 31);
             this.title.TabIndex = 0;
-            this.title.Text = "Title";
+            this.title.Text = "Map";
             this.title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // titlePanel
@@ -119,12 +119,10 @@
             this.Name = "GameForm";
             this.ShowInTaskbar = false;
             this.Text = "gameForm";
-            this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.titlePanel.ResumeLayout(false);
             this.titlePanel.PerformLayout();
             this.ResumeLayout(false);
-
         }
 
         #endregion

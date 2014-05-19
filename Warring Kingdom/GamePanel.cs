@@ -294,7 +294,8 @@ namespace Warring_Kingdom
 
         private void disEmptyLand(string LandName)
         {
-            throw new NotImplementedException();
+            Form newCity = new NewCityForm(this.username, LandName);
+            newCity.ShowDialog();
         }
 
         private void disOtherCity(string cityName)
@@ -306,7 +307,7 @@ namespace Warring_Kingdom
         {
             this.Hide();
             this.gameForm.setTitle(cityName);
-            this.gameForm.Controls.Add(new CityPanel(cityName, this));
+            this.gameForm.Controls.Add(new CityPanel(cityName, this, this.gameForm));
         }
 
     }

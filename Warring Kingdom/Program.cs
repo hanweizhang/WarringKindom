@@ -17,9 +17,6 @@ namespace Warring_Kingdom
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new LoginForm());
-            //UserInfo userInfo = new UserInfo("your_username", "your-password");
-            //userInfo.setupConnect();
-            //userInfo.printSearchResult();
         }
     }
 }

@@ -15,6 +15,7 @@ namespace Warring_Kingdom
     public partial class CityPanel : UserControl
     {
         private GamePanel gamePanel;
+        private GameForm gameForm;
         private const int LAND_WIDTH = 269;
         private const int LAND_HEIGHT = 109;
         private const int BDPIC_WIDTH = 111;
@@ -25,12 +26,13 @@ namespace Warring_Kingdom
         private Point[] centerPoint = new Point[9];
         private bool[] isEmpty = new bool[9];
         private PictureBox[] picBox = new PictureBox[9];
+        private string cityName;
         //private Bitmap[] bdPic = new Bitmap[9];
         //private Thread paintThread;
         //private delegate void myInvoke();
         //private bool paintEnd;
 
-        public CityPanel(string cityName, GamePanel gamePanel)
+        public CityPanel(string cityName, GamePanel gamePanel, GameForm gameForm)
         {
             InitializeComponent();
             this.constructionPanel1.Hide();
@@ -66,6 +68,8 @@ namespace Warring_Kingdom
             picBox[8] = this.pictureBox9;
 
             this.gamePanel = gamePanel;
+            this.gameForm = gameForm;
+            this.cityName = cityName;
             initLand(cityName);
             //paintEnd = false;
             //paintThread = new Thread(new ThreadStart(drawThread));
@@ -232,6 +236,7 @@ namespace Warring_Kingdom
             //this.paintThread.Abort();
             //this.paintEnd = true;
             this.gamePanel.Show();
+            this.gameForm.setTitle("Map");
             this.Dispose();
         }
         private void CityPanel_MouseEnter(object sender, EventArgs e)
@@ -389,40 +394,52 @@ namespace Warring_Kingdom
 
         public void updateLand(int buildingNum, int index)
         {
+            String buildingName="";
             switch (buildingNum)
             {
                 case 1:
-                    this.picBox[index - 1].Image = new Bitmap(Properties.Resources.building1); 
+                    this.picBox[index - 1].Image = new Bitmap(Properties.Resources.building1);
+                    buildingName = "barrack";
                     break;
                 case 2:
                     this.picBox[index - 1].Image = new Bitmap(Properties.Resources.building2);
+                    buildingName = "smithy";
                     break;
                 case 3:
                     this.picBox[index - 1].Image = new Bitmap(Properties.Resources.building3);
+                    buildingName = "archery";
                     break;
                 case 4:
                     this.picBox[index - 1].Image = new Bitmap(Properties.Resources.building4);
+                    buildingName = "general shop";
                     break;
                 case 5:
                     this.picBox[index - 1].Image = new Bitmap(Properties.Resources.building5);
+                    buildingName = "house";
                     break;
                 case 6:
                     this.picBox[index - 1].Image = new Bitmap(Properties.Resources.building6);
+                    buildingName = "tavern";
                     break;
                 case 7:
                     this.picBox[index - 1].Image = new Bitmap(Properties.Resources.building7);
+                    buildingName = "armory";
                     break;
                 case 8:
                     this.picBox[index - 1].Image = new Bitmap(Properties.Resources.building8);
+                    buildingName = "inn";
                     break;
                 case 9:
                     this.picBox[index - 1].Image = new Bitmap(Properties.Resources.building9);
+                    buildingName = "post";
                     break;
                 case 10:
                     this.picBox[index - 1].Image = new Bitmap(Properties.Resources.building10);
+                    buildingName = "farm";
                     break;
                 case 11:
                     this.picBox[index - 1].Image = new Bitmap(Properties.Resources.building11);
+                    buildingName = "storage";
                     break;
                 default: break;
             }
@@ -430,6 +447,33 @@ namespace Warring_Kingdom
             checkMouse[index - 1] = new Rectangle(0, 0, BDPIC_WIDTH, BDPIC_HEIGHT);
             picBox[index - 1].Location = new System.Drawing.Point(centerPoint[index - 1].X - BDPIC_WIDTH / 2, centerPoint[index - 1].Y - BDPIC_HEIGHT / 2);
             picBox[index - 1].Size = new System.Drawing.Size(BDPIC_WIDTH, BDPIC_HEIGHT);
+
+            // update database
+            try
+            {
+                // connect to the server
+                String connectStr = "server=titan.csse.rose-hulman.edu; uid=zhangh; pwd=Zhw628zhw628; database=WarKing";
+                SqlConnection conn = new SqlConnection(connectStr);
+                conn.Open();
+                try
+                {
+                    String sql = "EXEC ConstructBuilding @CityName='" + this.cityName + "', @BuildingLocation='" + index + "', @BuildingName='" + buildingName + "'";
+                    SqlCommand selectComm = new SqlCommand(sql, conn);
+                    SqlDataReader reader = selectComm.ExecuteReader();
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            
         }
     }
 }
