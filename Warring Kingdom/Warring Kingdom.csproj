@@ -50,6 +50,12 @@
     <Compile Include="CityPanel.Designer.cs">
       <DependentUpon>CityPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConstructionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConstructionPanel.Designer.cs">
+      <DependentUpon>ConstructionPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Coordinate.cs" />
     <Compile Include="GameForm.cs">
       <SubType>Form</SubType>
@@ -92,6 +98,9 @@
     <Compile Include="UserInfo.cs" />
     <EmbeddedResource Include="CityPanel.resx">
       <DependentUpon>CityPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConstructionPanel.resx">
+      <DependentUpon>ConstructionPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GameForm.resx">
       <DependentUpon>GameForm.cs</DependentUpon>

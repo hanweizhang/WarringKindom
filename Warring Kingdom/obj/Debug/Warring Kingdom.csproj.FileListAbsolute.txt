@@ -70,3 +70,4 @@ C:\Users\zhangh\Documents\GitHub\WarringKindom\Warring Kingdom\obj\Debug\Warring
 C:\Users\zhangh\Documents\GitHub\WarringKindom\Warring Kingdom\obj\Debug\Warring_Kingdom.Properties.Resources.resources
 C:\Users\zhangh\Documents\GitHub\WarringKindom\Warring Kingdom\obj\Debug\Warring_Kingdom.RegForm.resources
 C:\Users\zhangh\Documents\GitHub\WarringKindom\Warring Kingdom\obj\Debug\Warring Kingdom.csproj.GenerateResource.Cache
+C:\Users\zhangh\Documents\GitHub\WarringKindom\Warring Kingdom\obj\Debug\Warring_Kingdom.ConstructionPanel.resources

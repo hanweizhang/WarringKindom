@@ -77,7 +77,7 @@
             this.titlePanel.BackColor = System.Drawing.Color.Transparent;
             this.titlePanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("titlePanel.BackgroundImage")));
             this.titlePanel.Controls.Add(this.title);
-            this.titlePanel.Location = new System.Drawing.Point(308, 12);
+            this.titlePanel.Location = new System.Drawing.Point(308, 20);
             this.titlePanel.Name = "titlePanel";
             this.titlePanel.Size = new System.Drawing.Size(1500, 50);
             this.titlePanel.TabIndex = 2;
@@ -86,7 +86,7 @@
             // 
             this.gamePanel1.BackColor = System.Drawing.Color.Transparent;
             this.gamePanel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.gamePanel1.Location = new System.Drawing.Point(275, 76);
+            this.gamePanel1.Location = new System.Drawing.Point(275, 100);
             this.gamePanel1.Margin = new System.Windows.Forms.Padding(4);
             this.gamePanel1.Name = "gamePanel1";
             this.gamePanel1.Size = new System.Drawing.Size(1600, 900);
@@ -134,8 +134,6 @@
         private System.Windows.Forms.Label title;
         private System.Windows.Forms.Panel titlePanel;
         private GamePanel gamePanel1;
-
-
 
     }
 }
