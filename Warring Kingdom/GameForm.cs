@@ -80,5 +80,10 @@ namespace Warring_Kingdom
         {
             refreshMap();
         }
+
+        public void updateUserInfo()
+        {
+            this.infoPanel1.getData(this.username);
+        }
     }
 }

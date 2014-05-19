@@ -145,6 +145,7 @@ namespace Warring_Kingdom
             {
                 MessageBox.Show("Failed...");
             }
+            this.gameForm.updateUserInfo();
             this.Dispose();
         }
 

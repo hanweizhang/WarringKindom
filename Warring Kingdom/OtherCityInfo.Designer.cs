@@ -112,7 +112,7 @@
             // 
             this.comboBox1.AllowDrop = true;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.comboBox1.ForeColor = System.Drawing.Color.SpringGreen;
+            this.comboBox1.ForeColor = System.Drawing.Color.Black;
             this.comboBox1.Location = new System.Drawing.Point(124, 221);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);

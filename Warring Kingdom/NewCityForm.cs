@@ -61,6 +61,7 @@ namespace Warring_Kingdom
                     MessageBox.Show(ex.ToString());
                 }
                 this.gameForm.refreshMap();
+                this.gameForm.updateUserInfo();
                 this.Dispose();
             }
         }
