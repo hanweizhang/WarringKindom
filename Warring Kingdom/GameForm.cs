@@ -66,6 +66,16 @@ namespace Warring_Kingdom
             this.Controls.Add(this.gamePanel1);
         }
 
+        public void hideRefreshBtn()
+        {
+            this.RefreshBtn.Hide();
+        }
+
+        public void showRefreshBtn()
+        {
+            this.RefreshBtn.Show();
+        }
+
         private void RefreshBtn_Click(object sender, EventArgs e)
         {
             refreshMap();

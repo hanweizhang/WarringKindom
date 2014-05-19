@@ -15,14 +15,14 @@ namespace Warring_Kingdom
     {
         private string username;
         private string cityName;
-        private GameForm gamrForm;
+        private GameForm gameForm;
 
         public OtherCityInfo(string username, string cityName, GameForm gameForm)
         {
             InitializeComponent();
             this.username = username;
             this.cityName = cityName;
-            this.gamrForm = gamrForm;
+            this.gameForm = gameForm;
             initCityInfo();
             initComboBox();
         }
@@ -41,9 +41,12 @@ namespace Warring_Kingdom
                     string str = "EXEC GetCityInfo @Cityname='"+this.cityName+"'";
                     SqlCommand checkComm = new SqlCommand(str, conn);
                     SqlDataReader reader = checkComm.ExecuteReader();
-                    this.cityNameLabel.Text = this.cityName;
-                    this.ownerNameLabel.Text = (string)reader.GetValue(0);
-                    this.armyNumLabel.Text = ((int)reader.GetValue(1)) + "";
+                    if (reader.Read())
+                    {
+                        this.cityNameLabel.Text = this.cityName;
+                        this.ownerNameLabel.Text = (string)reader.GetValue(0);
+                        this.armyNumLabel.Text = ((int)reader.GetValue(1)) + "";
+                    }
                     reader.Close();
                 }
                 catch (Exception ex)
@@ -136,7 +139,7 @@ namespace Warring_Kingdom
             if (isCaptured)
             {
                 MessageBox.Show("City Captured!");
-                this.gamrForm.refreshMap();
+                this.gameForm.refreshMap();
             }
             else
             {

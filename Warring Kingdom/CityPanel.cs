@@ -14,7 +14,7 @@ namespace Warring_Kingdom
 {
     public partial class CityPanel : UserControl
     {
-        private GamePanel gamePanel;
+        //private GamePanel gamePanel;
         private GameForm gameForm;
         private const int LAND_WIDTH = 269;
         private const int LAND_HEIGHT = 109;
@@ -32,7 +32,7 @@ namespace Warring_Kingdom
         //private delegate void myInvoke();
         //private bool paintEnd;
 
-        public CityPanel(string cityName, GamePanel gamePanel, GameForm gameForm)
+        public CityPanel(string cityName, GameForm gameForm)
         {
             InitializeComponent();
             this.constructionPanel1.Hide();
@@ -67,7 +67,7 @@ namespace Warring_Kingdom
             picBox[7] = this.pictureBox8;
             picBox[8] = this.pictureBox9;
 
-            this.gamePanel = gamePanel;
+            //this.gamePanel = gamePanel;
             this.gameForm = gameForm;
             this.cityName = cityName;
             initLand(cityName);
@@ -235,7 +235,7 @@ namespace Warring_Kingdom
         {
             //this.paintThread.Abort();
             //this.paintEnd = true;
-            this.gamePanel.Show();
+            this.gameForm.refreshMap();
             this.gameForm.setTitle("Map");
             this.Dispose();
         }

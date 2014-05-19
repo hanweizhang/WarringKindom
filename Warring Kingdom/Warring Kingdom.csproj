@@ -44,7 +44,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArrayList.cs" />
     <Compile Include="CityPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>

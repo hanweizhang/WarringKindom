@@ -57,6 +57,7 @@ namespace Warring_Kingdom
         public void setForm(GameForm gameForm)
         {
             this.gameForm = gameForm;
+            this.gameForm.showRefreshBtn();
         }
 
         private void getCities()
@@ -306,9 +307,10 @@ namespace Warring_Kingdom
 
         private void disOwnCity(string cityName)
         {
-            this.Hide();
             this.gameForm.setTitle(cityName);
-            this.gameForm.Controls.Add(new CityPanel(cityName, this, this.gameForm));
+            this.gameForm.Controls.Add(new CityPanel(cityName, this.gameForm));
+            this.gameForm.hideRefreshBtn();
+            this.Dispose();
         }
 
     }
