@@ -79,6 +79,7 @@ namespace Warring_Kingdom
         private void RefreshBtn_Click(object sender, EventArgs e)
         {
             refreshMap();
+            updateUserInfo();
         }
 
         public void updateUserInfo()

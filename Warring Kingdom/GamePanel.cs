@@ -24,10 +24,12 @@ namespace Warring_Kingdom
         private const int LAND_HEIGHT = 100;
         private const int LAND_NUM = 10;
         private Bitmap map;
-        private Bitmap city;
+        private Bitmap myCity;
+        private Bitmap otherCity;
         private Bitmap empty;
         private Rectangle[] landRect;
         private bool[] hasCity;
+        private bool[] isMine;
         private string username;
         private GameForm gameForm;
 
@@ -38,7 +40,8 @@ namespace Warring_Kingdom
             //drag = false;
             //this.mapPic.MouseWheel += GamePanel_MouseWheel;
             map = new Bitmap(this.mapPic.Image);
-            city = new Bitmap(Properties.Resources.fortress1);
+            myCity = new Bitmap(Properties.Resources.fortress1);
+            otherCity = new Bitmap(Properties.Resources.fortress2);
             empty = new Bitmap(Properties.Resources.empty);
             // display the map
             //disRect = new Rectangle(map.Width / 4, map.Height / 4, map.Width / 2, map.Height / 2);
@@ -64,23 +67,26 @@ namespace Warring_Kingdom
         {
             landRect = new Rectangle[LAND_NUM];
             hasCity = new bool[LAND_NUM];
+            isMine = new bool[LAND_NUM];
             try
             {
                 // connect to the server
-                String connectStr = "server=titan.csse.rose-hulman.edu; uid=zhangh; pwd=Zhw628zhw628; database=WarKing";
+                String connectStr = "server=titan.csse.rose-hulman.edu; uid=wkuser; pwd=wkuser; database=WarKing";
                 SqlConnection conn = new SqlConnection(connectStr);
                 conn.Open();
                 // get the information
                 try
                 {
-                    String comm = "EXEC GetCity";
+                    String comm = "EXEC GetCity @Username='"+this.username+"'";
+                    //String comm = "EXEC GetCity";
                     SqlCommand selectComm = new SqlCommand(comm, conn);
                     SqlDataReader reader = selectComm.ExecuteReader();
                     for (int i = 0; i < LAND_NUM; i++)
                     {
                         reader.Read();
-                        landRect[i] = new Rectangle((int)reader.GetValue(0) - LAND_WIDTH / 2, (int)reader.GetValue(1) - LAND_HEIGHT/2, LAND_WIDTH, LAND_HEIGHT);
-                        hasCity[i] = ((int)reader.GetValue(2))==0?false:true;
+                        landRect[i] = new Rectangle((int)reader.GetValue(0) - LAND_WIDTH / 2, (int)reader.GetValue(1) - LAND_HEIGHT / 2, LAND_WIDTH, LAND_HEIGHT);
+                        hasCity[i] = ((int)reader.GetValue(2) == 0) ? false : true;
+                        isMine[i] = ((int)reader.GetValue(3) == 0) ? false : true;
                     }
                     reader.Close();
                 }
@@ -103,7 +109,14 @@ namespace Warring_Kingdom
             {
                 if (hasCity[i])
                 {
-                    Graphics.FromImage(this.mapPic.Image).DrawImage(city, landRect[i]);
+                    if (isMine[i])
+                    {
+                        Graphics.FromImage(this.mapPic.Image).DrawImage(myCity, landRect[i]);
+                    }
+                    else
+                    {
+                        Graphics.FromImage(this.mapPic.Image).DrawImage(otherCity, landRect[i]);
+                    }
                 }
                 else
                 {
@@ -258,7 +271,7 @@ namespace Warring_Kingdom
                 try
                 {
                     // connect to the server
-                    String connectStr = "server=titan.csse.rose-hulman.edu; uid=zhangh; pwd=Zhw628zhw628; database=WarKing";
+                    String connectStr = "server=titan.csse.rose-hulman.edu; uid=wkuser; pwd=wkuser; database=WarKing";
                     SqlConnection conn = new SqlConnection(connectStr);
                     conn.Open();
                     // get the information

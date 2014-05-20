@@ -92,7 +92,7 @@ namespace Warring_Kingdom
             try
             {
                 // connect to the server
-                String connectStr = "server=titan.csse.rose-hulman.edu; uid=zhangh; pwd=Zhw628zhw628; database=WarKing";
+                String connectStr = "server=titan.csse.rose-hulman.edu; uid=wkuser; pwd=wkuser; database=WarKing";
                 SqlConnection conn = new SqlConnection(connectStr);
                 conn.Open();
                 // get the information
@@ -452,7 +452,7 @@ namespace Warring_Kingdom
             try
             {
                 // connect to the server
-                String connectStr = "server=titan.csse.rose-hulman.edu; uid=zhangh; pwd=Zhw628zhw628; database=WarKing";
+                String connectStr = "server=titan.csse.rose-hulman.edu; uid=wkuser; pwd=wkuser; database=WarKing";
                 SqlConnection conn = new SqlConnection(connectStr);
                 conn.Open();
                 try
