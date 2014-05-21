@@ -86,7 +86,7 @@ namespace Warring_Kingdom
                         reader.Read();
                         landRect[i] = new Rectangle((int)reader.GetValue(0) - LAND_WIDTH / 2, (int)reader.GetValue(1) - LAND_HEIGHT / 2, LAND_WIDTH, LAND_HEIGHT);
                         hasCity[i] = ((int)reader.GetValue(2) == 0) ? false : true;
-                        isMine[i] = ((int)reader.GetValue(3) == 0) ? false : true;
+                        isMine[i] = reader.GetValue(3).ToString().Equals(this.username);
                     }
                     reader.Close();
                 }

@@ -138,7 +138,7 @@ namespace Warring_Kingdom
 
             if (isCaptured)
             {
-                MessageBox.Show("City Captured!");
+                MessageBox.Show("Success!");
                 this.gameForm.refreshMap();
             }
             else
