@@ -329,66 +329,95 @@ namespace Warring_Kingdom
             {
                 if (sender.Equals(pictureBox1))
                 {
-                    construct(1, e);
+                    constructAndDestroy(1, e);
                 }
                 else if (sender.Equals(pictureBox2))
                 {
-                    construct(2, e);
+                    constructAndDestroy(2, e);
                 }
                 else if (sender.Equals(pictureBox3))
                 {
-                    construct(3, e);
+                    constructAndDestroy(3, e);
                 }
                 else if (sender.Equals(pictureBox4))
                 {
-                    construct(4, e);
+                    constructAndDestroy(4, e);
                 }
                 else if (sender.Equals(pictureBox5))
                 {
-                    construct(5, e);
+                    constructAndDestroy(5, e);
                 }
                 else if (sender.Equals(pictureBox6))
                 {
-                    construct(6, e);
+                    constructAndDestroy(6, e);
                 }
                 else if (sender.Equals(pictureBox7))
                 {
-                    construct(7, e);
+                    constructAndDestroy(7, e);
                 }
                 else if (sender.Equals(pictureBox8))
                 {
-                    construct(8, e);
+                    constructAndDestroy(8, e);
                 }
                 else if (sender.Equals(pictureBox9))
                 {
-                    construct(9, e);
+                    constructAndDestroy(9, e);
                 }
-                for (int i = 0; i < 9; i++)
+            }
+        }
+
+        private void constructAndDestroy(int index, MouseEventArgs e)
+        {
+            if (checkMouse[index - 1].Contains(e.X, e.Y))
+            {
+                if (isEmpty[index - 1])
                 {
-                    if (checkMouse[i].Contains(e.X, e.Y)&&isEmpty[i])
+                    this.constructionPanel1.setIndex(index);
+                    this.constructionPanel1.setCity(this);
+                    this.constructionPanel1.Show();
+                }
+                else
+                {
+                    DialogResult result = MessageBox.Show("Are you sure to destroy this building?", "Destroy Building", MessageBoxButtons.YesNo);
+                    if (result.Equals(DialogResult.Yes))
                     {
-                        // pop up construction panel
-                        //this.paintThread.Abort();
-                        //paintEnd = true;
-                       
+                        destroyCity(index);
                     }
                 }
             }
         }
 
-        private void construct(int index, MouseEventArgs e)
+        private void destroyCity(int index)
         {
-            for (int i = 0; i < 9; i++)
+            picBox[index-1].Image = null;
+            isEmpty[index-1] = true;
+            checkMouse[index-1] = new Rectangle(LANDPIC_WIDTH / 2 - LAND_WIDTH / 2, LANDPIC_HEIGHT / 2 - LAND_HEIGHT / 2, LAND_WIDTH, LAND_HEIGHT);
+            picBox[index - 1].Location = new System.Drawing.Point(centerPoint[index - 1].X - LANDPIC_WIDTH / 2, centerPoint[index-1].Y - LANDPIC_HEIGHT / 2);
+            picBox[index-1].Size = new System.Drawing.Size(LANDPIC_WIDTH, LANDPIC_HEIGHT);
+            // update database
+            try
             {
-                if (isEmpty[i] && checkMouse[i].Contains(e.X, e.Y))
+                // connect to the server
+                String connectStr = "server=titan.csse.rose-hulman.edu; uid=wkuser; pwd=wkuser; database=WarKing";
+                SqlConnection conn = new SqlConnection(connectStr);
+                conn.Open();
+                try
                 {
-                    if (i == index - 1)
-                    {
-                        this.constructionPanel1.setIndex(index);
-                        this.constructionPanel1.setCity(this);
-                        this.constructionPanel1.Show();
-                    }
+                    String sql = "EXEC DestroyBuilding @CityName='"+this.cityName+"', @BuildingLocation='"+index+"'";
+                    SqlCommand selectComm = new SqlCommand(sql, conn);
+                    SqlDataReader reader = selectComm.ExecuteReader();
+                    reader.Close();
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
             }
         }
 

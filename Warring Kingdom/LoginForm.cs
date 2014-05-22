@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Web.Security;
 
 namespace Warring_Kingdom
 {
@@ -71,7 +72,7 @@ namespace Warring_Kingdom
                 try
                 {
                     // check if username already exist
-                    SqlCommand checkComm = new SqlCommand("EXEC CheckExistingUser @username='"+this.usrBox.Text+"', @userpassword='"+this.pwdBox.Text+"'", conn);
+                    SqlCommand checkComm = new SqlCommand("EXEC CheckExistingUser @username='" + this.usrBox.Text + "', @userpassword='" + FormsAuthentication.HashPasswordForStoringInConfigFile(this.pwdBox.Text, "MD5") + "'", conn);
                     SqlDataReader reader = checkComm.ExecuteReader();
                     if (reader.Read())
                     {

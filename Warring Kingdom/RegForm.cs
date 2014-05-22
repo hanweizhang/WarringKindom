@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Web.Security;
 
 namespace Warring_Kingdom
 {
@@ -74,7 +75,7 @@ namespace Warring_Kingdom
                 // insert the user information into the database
                 try
                 {
-                    string str = "EXEC Register @username='"+this.usrBox.Text+"', @userpassword='"+this.pwdBox1.Text+"', @email='"+this.emailBox.Text+"', @kingdomname='"+this.kdBox.Text+"'";
+                    string str = "EXEC Register @username='" + this.usrBox.Text + "', @userpassword='" + FormsAuthentication.HashPasswordForStoringInConfigFile(this.pwdBox1.Text, "MD5") + "', @email='" + this.emailBox.Text + "', @kingdomname='" + this.kdBox.Text + "'";
                     SqlCommand checkComm = new SqlCommand(str, conn);
                     SqlDataReader reader = checkComm.ExecuteReader();
                     if (reader.Read())
